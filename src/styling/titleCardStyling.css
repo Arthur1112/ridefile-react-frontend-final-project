@@ -2,6 +2,10 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-items: center;
+  justify-content: center;
 }
 
 img {
@@ -10,8 +14,10 @@ img {
 
 p {
   color: antiquewhite;
+  font-size: 30%;
 }
 
 #columnOne {
-  width: auto;
+  flex: 1;
+  border: 2px solid yellow;
 }
