@@ -1,0 +1,23 @@
+#rideImage {
+  width: 70%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  border-color: brown;
+  border-width: 5px;
+  border-style: solid;
+}
+
+#mainFlexContainer {
+  display: flex;
+  border-color: brown;
+  border-width: 5px;
+  border-style: solid;
+  margin: auto;
+}
+
+#profileImage {
+  border-radius: 60%;
+  width: 20%;
+}
