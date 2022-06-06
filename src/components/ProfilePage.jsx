@@ -28,7 +28,7 @@ export default function ProfilePage() {
                 id="profileImage"
                 src="https://www.ndstudies.gov/gr4/sites/default/files/unit1/img/45-TR_portrait.jpg"
               />
-              <dl>
+              <dl id="mainProfileInfo">
                 <dt>Owner : {profile[0].rideOwner}</dt>
                 <dt>Make : {profile[0].rideMake}</dt>
                 <dt>Model : {profile[0].rideMake}</dt>

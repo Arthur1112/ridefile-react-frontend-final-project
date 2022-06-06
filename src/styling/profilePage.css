@@ -2,6 +2,7 @@
   width: 70%;
   display: flex;
   margin: auto;
+  margin-top: 5px;
   justify-content: center;
   align-content: center;
   border-color: brown;
@@ -14,10 +15,24 @@
   border-color: brown;
   border-width: 5px;
   border-style: solid;
+  width: 70%;
   margin: auto;
+  margin-top: 5px;
 }
 
 #profileImage {
   border-radius: 60%;
   width: 20%;
+  border-color: brown;
+  border-width: 5px;
+  border-style: solid;
+  margin: auto;
+}
+
+#mainProfileInfo {
+  border-color: brown;
+  border-width: 5px;
+  border-style: solid;
+  width: 70%;
+  margin: auto;
 }
