@@ -22,23 +22,23 @@ export default function ProfilePage() {
               id="rideImage"
               src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/CAC20FOC051B0101.jpg"
             />
-            <h1>Profile:</h1>
             <div id="mainFlexContainer">
               <img
                 id="profileImage"
                 src="https://www.ndstudies.gov/gr4/sites/default/files/unit1/img/45-TR_portrait.jpg"
               />
               <dl id="mainProfileInfo">
-                <dt>Owner : {profile[0].rideOwner}</dt>
+                <dt>
+                  {profile[0].rideYear} {profile[0].rideModel}{" "}
+                  {profile[0].rideTrim}
+                </dt>
                 <dt>Make : {profile[0].rideMake}</dt>
-                <dt>Model : {profile[0].rideMake}</dt>
-                <dt>Trim : {profile[0].rideTrim}</dt>
-                <dt>Year : {profile[0].rideYear}</dt>
                 <dt>Color : {profile[0].rideColor}</dt>
+                <dt>Owner : {profile[0].rideOwner}</dt>
               </dl>
             </div>
             <br />
-            <dl>
+            <dl id="extraProfileInfo">
               <dt>Transmission:</dt>
               <dd>{profile[0].transmission}</dd>
               <dt>Exhaust System</dt>

@@ -35,4 +35,16 @@
   border-style: solid;
   width: 70%;
   margin: auto;
+  font-weight: bolder;
+  line-height: 1.5em;
+  padding-left: 1em;
+}
+
+#extraProfileInfo {
+  border-color: brown;
+  border-width: 5px;
+  border-style: solid;
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
 }
