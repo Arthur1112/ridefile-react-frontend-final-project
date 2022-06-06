@@ -12,7 +12,7 @@ export default function ProfilePage() {
   }, []);
   console.log(profile);
   return (
-    <Paper elevation={3}>
+    <Paper variant="outlined">
       {!profile ? (
         <h2>Loading...</h2>
       ) : (
