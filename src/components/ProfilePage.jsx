@@ -28,11 +28,10 @@ export default function ProfilePage() {
                 src="https://www.ndstudies.gov/gr4/sites/default/files/unit1/img/45-TR_portrait.jpg"
               />
               <dl id="mainProfileInfo">
-                <dt>
-                  {profile[0].rideYear} {profile[0].rideModel}{" "}
-                  {profile[0].rideTrim}
+                <dt id="rideMainInfo">
+                  {profile[0].rideYear} {profile[0].rideMake}{" "}
+                  {profile[0].rideModel} {profile[0].rideTrim}
                 </dt>
-                <dt>Make : {profile[0].rideMake}</dt>
                 <dt>Color : {profile[0].rideColor}</dt>
                 <dt>Owner : {profile[0].rideOwner}</dt>
               </dl>
