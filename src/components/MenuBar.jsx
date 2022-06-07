@@ -1,5 +1,3 @@
-import { AppBar, Typography } from "@mui/material";
-import { Container } from "@mui/system";
 import "../styling/menuBar.css";
 
 export default function MenuBar() {
@@ -19,6 +17,12 @@ export default function MenuBar() {
           </li>
           <li>
             <a href="#">Profile</a>
+          </li>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Followers</a>
           </li>
         </ul>
       </nav>

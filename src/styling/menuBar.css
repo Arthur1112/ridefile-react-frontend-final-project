@@ -84,7 +84,7 @@
   overflow: hidden;
   box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
   /* background-color: #353746; */
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(100px);
   animation: border-transform 7s linear infinite;
   transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
     right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),

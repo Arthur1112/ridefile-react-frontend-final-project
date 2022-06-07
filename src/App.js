@@ -13,6 +13,12 @@ function App() {
       <section>
         <Routes>
           <Route
+            style={{
+              background: "url('https://w.wallha.com/ws/11/56tXTAlV.jpg')",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
             path="/"
             element={
               <>
