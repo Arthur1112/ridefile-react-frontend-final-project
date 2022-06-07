@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <h1>Menu Bar</h1>
-      {/* <TitleCards /> */}
+      <TitleCards />
       <section>
         <Routes>
           <Route path="/" element={<ProfileButton />} />

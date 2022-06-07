@@ -9,15 +9,22 @@ section {
 }
 
 img {
-  width: 30%;
+  width: 100%;
 }
 
 p {
   color: antiquewhite;
-  font-size: 30%;
+  font-size: 130%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
 }
 
 #columnOne {
-  flex: 1;
+  margin: 10px;
   border: 2px solid yellow;
+  justify-content: space-between;
+  width: 25%;
+  background-color: black;
 }
