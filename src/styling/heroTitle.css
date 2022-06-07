@@ -23,3 +23,17 @@ h1 {
     0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
     0.035em 0.035em 0 rgba(0, 0, 0, 12%);
 }
+
+#titleDiv {
+  border-style: solid;
+  border-width: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  justify-items: center;
+  justify-content: center;
+  margin: 80px;
+  margin-top: 30px;
+}
