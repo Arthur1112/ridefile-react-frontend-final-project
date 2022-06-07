@@ -21,21 +21,19 @@ body {
 }
 
 h1 {
-  padding: 1%;
-  border-style: solid;
-  border-color: rgb(187, 187, 187);
-  /* backdrop-filter: blur(40px); */
-  backdrop-filter: invert(0.7);
-  color: rgb(0, 0, 0);
+  padding: 4%;
+  margin-top: 120px;
+  /* border-color: rgb(187, 187, 187); */
+  backdrop-filter: blur(20px);
+  /* backdrop-filter: invert(0.7); */
+  color: rgb(255, 255, 255);
   font-size: 14vw;
   font-weight: 900;
-  text-shadow: -0.0075em 0.0075em 0 rgba(60, 54, 55, 14%),
-    0.005em 0.005em 0 rgba(60, 54, 55, 10%),
-    0.01em 0.01em 0 rgba(60, 54, 55, 12%), 0.015em 0.015em rgba(60, 54, 55, 14%),
-    0.02em 0.02em 0 rgba(60, 54, 55, 16%),
-    0.025em 0.025em 0 rgba(60, 54, 55, 18%),
-    0.03em 0.03em 0 rgba(60, 54, 55, 40%),
-    0.035em 0.035em 0 rgba(60, 54, 55, 12%);
+  text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
+    0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
+    0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
+    0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
+    0.035em 0.035em 0 rgba(0, 0, 0, 12%);
 }
 
 section {
@@ -46,6 +44,7 @@ section {
   align-self: center;
   justify-items: center;
   justify-content: center;
+  margin: 80px;
 }
 
 /* h1 {
@@ -62,13 +61,13 @@ section {
 
 img {
   width: 100%;
-  border-radius: 10%;
+  border-radius: 5%;
   border-color: antiquewhite;
 }
 
 p {
-  border-color: antiquewhite;
-  color: antiquewhite;
+  color: white;
+  font-weight: bolder;
   font-size: 130%;
   align-items: center;
   justify-content: center;
@@ -78,17 +77,19 @@ p {
 
 #columnOne {
   margin: 10px;
-  border-radius: 10%;
+  border-radius: 5%;
+  color: black;
+  backdrop-filter: blur(20px);
   /* border: 2px solid yellow; */
   justify-content: space-between;
   width: 25%;
-  background-color: black;
 }
 
 #columnThree {
   margin: 10px;
+  border-radius: 5%;
+  backdrop-filter: blur(20px);
   /* border: 2px solid yellow; */
   justify-content: space-between;
   width: 27%;
-  background-color: black;
 }
