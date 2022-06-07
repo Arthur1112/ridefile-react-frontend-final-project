@@ -1,11 +1,10 @@
 import "./App.css";
 import "./styling/styling.css";
-import TitleCards from "./components/TitleCards";
+import HeroPage from "./components/HeroPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProfileButton from "./components/ProfileButton";
 import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
-import HeroTitle from "./components/HeroTitle";
 
 function App() {
   return (
@@ -17,8 +16,7 @@ function App() {
             path="/"
             element={
               <>
-                <HeroTitle />
-                <TitleCards />
+                <HeroPage />
                 <ProfileButton />
               </>
             }

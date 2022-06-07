@@ -1,18 +1,10 @@
-import {
-  Card,
-  CardActionArea,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
 import "../styling/titleCardStyling.css";
+import HeroTitle from "./HeroTitle";
 
-export default function TitleCards() {
+export default function HeroPage() {
   return (
     <>
-      {/* <div className="container">
-        <h1>RideFile</h1>
-      </div> */}
+      <HeroTitle />
       <section>
         <div id="columnOne">
           <img src="https://wallpapercave.com/wp/wp8333356.jpg" alt="" />
