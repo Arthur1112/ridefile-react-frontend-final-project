@@ -36,6 +36,7 @@ export default function ProfilePage() {
             </dl>
           </div>
           <br />
+          <h2>Custom / Stock Vehicle Specs</h2>
           <dl id="extraProfileInfo">
             <dt>Transmission:</dt>
             <dd>{profile[0].transmission}</dd>
