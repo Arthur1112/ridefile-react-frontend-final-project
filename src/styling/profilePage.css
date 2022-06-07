@@ -3,13 +3,14 @@ body {
 }
 
 .css-172kgz0-MuiPaper-root {
-  background-color: aqua;
+  background-color: black;
   width: 70%;
 }
 
 #rideImage {
-  width: 70%;
-  display: flex;
+  width: auto;
+  display: grid;
+  /* display: flex; */
   margin: auto;
   margin-top: 5px;
   justify-content: center;
@@ -24,7 +25,7 @@ body {
   border-color: brown;
   border-width: 5px;
   border-style: solid;
-  width: 70%;
+  width: auto;
   margin: auto;
   margin-top: 5px;
 }
@@ -36,6 +37,11 @@ body {
   border-width: 5px;
   border-style: solid;
   margin: auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  /* margin: -70px 10px 10px 180px; */
+  /* position: absolute; */
 }
 
 #rideMainInfo {

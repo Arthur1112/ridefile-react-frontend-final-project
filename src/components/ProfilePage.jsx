@@ -12,7 +12,7 @@ export default function ProfilePage() {
   }, []);
   console.log(profile);
   return (
-    <Paper variant="outlined">
+    <section id="mainFlexContainer">
       {!profile ? (
         <h2>Loading...</h2>
       ) : (
@@ -21,7 +21,7 @@ export default function ProfilePage() {
             id="rideImage"
             src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/CAC20FOC051B0101.jpg"
           />
-          <div id="mainFlexContainer">
+          <div>
             <img
               id="profileImage"
               src="https://www.ndstudies.gov/gr4/sites/default/files/unit1/img/45-TR_portrait.jpg"
@@ -64,6 +64,6 @@ export default function ProfilePage() {
           </dl>
         </>
       )}
-    </Paper>
+    </section>
   );
 }
