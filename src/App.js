@@ -5,15 +5,24 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProfileButton from "./components/ProfileButton";
 import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
+import HeroTitle from "./components/HeroTitle";
 
 function App() {
   return (
     <BrowserRouter>
       <MenuBar />
-      <TitleCards />
       <section>
         <Routes>
-          <Route path="/" element={<ProfileButton />} />
+          <Route
+            path="/"
+            element={
+              <>
+                <HeroTitle />
+                <TitleCards />
+                <ProfileButton />
+              </>
+            }
+          />
           <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </section>

@@ -10,9 +10,9 @@ import "../styling/titleCardStyling.css";
 export default function TitleCards() {
   return (
     <>
-      <div className="container">
+      {/* <div className="container">
         <h1>RideFile</h1>
-      </div>
+      </div> */}
       <section>
         <div id="columnOne">
           <img src="https://wallpapercave.com/wp/wp8333356.jpg" alt="" />
