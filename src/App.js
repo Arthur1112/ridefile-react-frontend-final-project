@@ -8,7 +8,7 @@ import ProfilePage from "./components/ProfilePage";
 function App() {
   return (
     <BrowserRouter>
-      <h1>Menu Bar</h1>
+      <h2>Menu Bar</h2>
       <TitleCards />
       <section>
         <Routes>

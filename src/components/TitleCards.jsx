@@ -10,9 +10,12 @@ import "../styling/titleCardStyling.css";
 export default function TitleCards() {
   return (
     <>
+      <div className="container">
+        <h1>RideFile</h1>
+      </div>
       <section>
         <div id="columnOne">
-          <img src="https://wallpapercave.com/wp/wp4787826.png" alt="" />
+          <img src="https://wallpapercave.com/wp/wp8333356.jpg" alt="" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Dignissimos, blanditiis soluta iste quae aliquid libero alias
@@ -21,7 +24,7 @@ export default function TitleCards() {
           </p>
         </div>
         <div id="columnOne">
-          <img src="https://wallpapercave.com/wp/wp4787826.png" alt="" />
+          <img src="https://wallpapercave.com/wp/wp8333429.jpg" alt="" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Dignissimos, blanditiis soluta iste quae aliquid libero alias
@@ -29,8 +32,8 @@ export default function TitleCards() {
             voluptates ea! Facere reprehenderit delectus quisquam.
           </p>
         </div>
-        <div id="columnOne">
-          <img src="https://wallpapercave.com/wp/wp4787826.png" alt="" />
+        <div id="columnThree">
+          <img src="https://wallpapercave.com/wp/wp8333524.jpg" alt="" />
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Dignissimos, blanditiis soluta iste quae aliquid libero alias
