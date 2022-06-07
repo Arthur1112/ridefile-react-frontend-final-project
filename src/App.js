@@ -4,11 +4,12 @@ import TitleCards from "./components/TitleCards";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProfileButton from "./components/ProfileButton";
 import ProfilePage from "./components/ProfilePage";
+import MenuBar from "./components/MenuBar";
 
 function App() {
   return (
     <BrowserRouter>
-      <h2>Menu Bar</h2>
+      <MenuBar />
       <TitleCards />
       <section>
         <Routes>
