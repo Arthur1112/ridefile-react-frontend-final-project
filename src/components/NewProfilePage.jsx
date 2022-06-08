@@ -1,15 +1,17 @@
 import { Button, Form, Input } from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { salt } from "../mySalt";
+import bcrypt from "bcryptjs";
 
 export default function CreateNewProfile() {
   let navigate = useNavigate();
-
+  // const hash = bcrypt.hashSync(password, salt);
   const [newProfile, setNewProfile] = useState({
     //some unique id
     username: "",
     email: "",
-    password: "",
+    password: "", //hash
     rideOwner: "",
     rideMake: "",
     rideModel: "",

@@ -17,6 +17,7 @@ function App() {
       setToken(_token);
     }
   }, []);
+  console.log(token);
   return (
     <BrowserRouter>
       <MenuBar />
