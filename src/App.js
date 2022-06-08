@@ -7,6 +7,7 @@ import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
 import { useEffect, useState } from "react";
 import Login from "./components/Login";
+import CreateNewProfile from "./components/NewProfilePage";
 
 function App() {
   const [token, setToken] = useState("");
@@ -38,6 +39,7 @@ function App() {
           />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/newProfile" element={<CreateNewProfile />} />
         </Routes>
       </section>
     </BrowserRouter>
