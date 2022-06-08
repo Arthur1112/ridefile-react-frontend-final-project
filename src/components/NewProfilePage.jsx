@@ -1,3 +1,4 @@
+import { Button, Form, Input } from "antd";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +8,8 @@ export default function CreateNewProfile() {
   const [newProfile, setNewProfile] = useState({
     //some unique id
     username: "",
+    email: "",
+    password: "",
     rideOwner: "",
     rideMake: "",
     rideModel: "",
@@ -29,8 +32,7 @@ export default function CreateNewProfile() {
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch("http://localhost:5050/newProfile", {
+    fetch("http://localhost:5050/addNewProfile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +47,7 @@ export default function CreateNewProfile() {
     const newValue = e.target.value;
     setNewProfile({
       ...newProfile,
-      [e.target.username]: newValue,
+      [e.target.name]: newValue,
     });
   };
 
@@ -53,203 +55,225 @@ export default function CreateNewProfile() {
     <section>
       <h2>Create a new profile!</h2>
       {error && <h3 style={{ color: "red" }}>{error}</h3>}
-      <form onSubmit={handleSubmit}>
-        <label for="username">
+      <Form onFinish={handleSubmit}>
+        <Form.Item for="username">
           Username:
-          <input
+          <Input
             name="username"
             type="text"
             value={newProfile.username}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideOwner">
+        <Form.Item for="password">
+          Password:
+          <Input
+            name="password"
+            type="text"
+            value={newProfile.password}
+            onChange={handleChange}
+          />
+        </Form.Item>
+        <br />
+        <Form.Item for="email">
+          Email:
+          <Input
+            name="email"
+            type="text"
+            value={newProfile.email}
+            onChange={handleChange}
+          />
+        </Form.Item>
+        <br />
+        <Form.Item for="rideOwner">
           Name:
-          <input
+          <Input
             name="rideOwner"
             type="text"
             value={newProfile.rideOwner}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
         <h4>
           Tell us more about your ride, please fill in some information for your
           vehicle
         </h4>
-        <label for="rideMake">
+        <Form.Item for="rideMake">
           Make:
-          <input
+          <Input
             name="rideMake"
             type="text"
             value={newProfile.rideMake}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideModel">
+        <Form.Item for="rideModel">
           Model:
-          <input
+          <Input
             name="rideModel"
             type="text"
             value={newProfile.rideModel}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideTrim">
+        <Form.Item for="rideTrim">
           Trim level:
-          <input
+          <Input
             name="rideTrim"
             type="text"
             value={newProfile.rideTrim}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideYear">
+        <Form.Item for="rideYear">
           Year:
-          <input
+          <Input
             name="rideYear"
             type="text"
             value={newProfile.rideYear}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="transmission">
+        <Form.Item for="transmission">
           Transmission:
-          <input
+          <Input
             name="transmission"
             type="text"
             value={newProfile.transmission}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideColor">
+        <Form.Item for="rideColor">
           Color:
-          <input
+          <Input
             name="rideColor"
             type="text"
             value={newProfile.rideColor}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideTireSize">
+        <Form.Item for="rideTireSize">
           Tire Size:
-          <input
+          <Input
             name="rideTireSize"
             type="text"
             value={newProfile.rideTireSize}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideRimSize">
+        <Form.Item for="rideRimSize">
           Rim Size:
-          <input
+          <Input
             name="rideRimSize"
             type="text"
             value={newProfile.rideRimSize}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="RimsInfo">
+        <Form.Item for="RimsInfo">
           Rims Info:
-          <input
+          <Input
             name="RimsInfo"
             type="text"
             value={newProfile.RimsInfo}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="frontBrakePads">
+        <Form.Item for="frontBrakePads">
           Front Brake Pads:
-          <input
+          <Input
             name="frontBrakePads"
             type="text"
             value={newProfile.frontBrakePads}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rearBrakePads">
+        <Form.Item for="rearBrakePads">
           Rear Brake Pads:
-          <input
+          <Input
             name="rearBrakePads"
             type="text"
             value={newProfile.rearBrakePads}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="engineOilType">
+        <Form.Item for="engineOilType">
           Type of engine oil:
-          <input
+          <Input
             name="engineOilType"
             type="text"
             value={newProfile.engineOilType}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="engineOilCapacity">
+        <Form.Item for="engineOilCapacity">
           Engine oil capacity:
-          <input
+          <Input
             name="engineOilCapacity"
             type="text"
             value={newProfile.engineOilCapacity}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="exhaustSystem">
+        <Form.Item for="exhaustSystem">
           Exhaust system:
-          <input
+          <Input
             name="exhaustSystem"
             type="text"
             value={newProfile.exhaustSystem}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="batterySize">
+        <Form.Item for="batterySize">
           Battery size:
-          <input
+          <Input
             name="batterySize"
             type="text"
             value={newProfile.batterySize}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="rideSeats">
+        <Form.Item for="rideSeats">
           Seats info:
-          <input
+          <Input
             name="rideSeats"
             type="text"
             value={newProfile.rideSeats}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <label for="soundSystem">
+        <Form.Item for="soundSystem">
           Sound system:
-          <input
+          <Input
             name="soundSystem"
             type="text"
             value={newProfile.soundSystem}
             onChange={handleChange}
           />
-        </label>
+        </Form.Item>
         <br />
-        <button type="submit">Submit</button>
-      </form>
+        <Button type="primary" htmlType="submit">
+          Submit
+        </Button>
+      </Form>
     </section>
   );
 }
