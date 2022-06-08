@@ -26,6 +26,30 @@ export default function CreateNewProfile() {
     rideSeats: "",
     soundSystem: "",
   });
+  const[error, setError] = useState('')
 
-  return <section></section>;
+  return (
+  <section>
+    <h2>Create a new profile!</h2>
+    {error && <h3 style={{color: 'red'}}>{error}</h3>}
+    <form onSubmit={}>
+      <label for='username'>
+        Username: 
+        <input name="username" type='text' value={newProfile.username} onChange={}  />
+      </label>
+      <br />
+      <label for='rideOwner'>
+        Name: 
+        <input name="rideOwner" type='text' value={newProfile.rideOwner} onChange={}  />
+      </label>
+      <br />
+      <label for='rideMake'>
+        Make of your ride: 
+        <input name="rideMake" type='text' value={newProfile.rideMake} onChange={}  />
+      </label>
+      <br />
+
+    </form>
+  </section>
+  )
 }
