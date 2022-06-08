@@ -8,7 +8,7 @@ export default function Login({ setToken }) {
     const hash = bcrypt.hashSync(password, salt);
     console.log(hash);
     fetch("http://localhost:5050/Profile", {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
