@@ -1,18 +1,18 @@
 import { Button, Form, Input } from "antd";
 import bcrypt from "bcryptjs";
-import salt from "../mySalt";
+import { salt } from "../mySalt";
 
 export default function Login({ setToken }) {
-  const handleLogin = ({ email, Password }) => {
+  const handleLogin = ({ email, password }) => {
     console.log(email, password);
     const hash = bcrypt.hashSync(password, salt);
-    // console.log(hash);
-    fetch("", {
-      method: "POST",
+    console.log(hash);
+    fetch("http://localhost:5050/Profile", {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, password: hash }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -28,7 +28,7 @@ export default function Login({ setToken }) {
   };
   return (
     <>
-      <h1>Login Please</h1>
+      <h3>Login Please</h3>
       <Form
         name="login"
         labelCol={{ span: 8 }}
