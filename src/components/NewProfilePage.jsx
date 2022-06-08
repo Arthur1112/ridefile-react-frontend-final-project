@@ -43,9 +43,90 @@ export default function CreateNewProfile() {
         <input name="rideOwner" type='text' value={newProfile.rideOwner} onChange={}  />
       </label>
       <br />
+      <h4>Tell us more about your ride, please fill in some information for your vehicle</h4>
       <label for='rideMake'>
-        Make of your ride: 
+        Make: 
         <input name="rideMake" type='text' value={newProfile.rideMake} onChange={}  />
+      </label>
+      <br />
+      <label for='rideModel'>
+        Model: 
+        <input name="rideModel" type='text' value={newProfile.rideModel} onChange={}  />
+      </label>
+      <br />
+      <label for="rideTrim">
+        Trim level: 
+        <input name="rideTrim" type='text' value={newProfile.rideTrim} onChange={}  />
+      </label>
+      <br />
+      <label for='rideYear'>
+        Year: 
+        <input name="rideYear" type='text' value={newProfile.rideYear} onChange={}  />
+      </label>
+      <br />
+      <label for='transmission'>
+        Transmission: 
+        <input name="transmission" type='text' value={newProfile.transmission} onChange={}  />
+      </label>
+      <br />
+      <label for='rideColor'>
+        Color: 
+        <input name="rideColor" type='text' value={newProfile.rideColor} onChange={}  />
+      </label>
+      <br />
+      <label for='rideTireSize'>
+        Tire Size: 
+        <input name="rideTireSize" type='text' value={newProfile.rideTireSize} onChange={}  />
+      </label>
+      <br />
+      <label for='rideRimSize'>
+        Rim Size: 
+        <input name="rideRimSize" type='text' value={newProfile.rideRimSize} onChange={}  />
+      </label>
+      <br />
+      <label for="RimsInfo">
+        Rims Info: 
+        <input name="RimsInfo" type='text' value={newProfile.RimsInfo} onChange={}  />
+      </label>
+      <br />
+      <label for='frontBrakePads'>
+        Front Brake Pads: 
+        <input name="frontBrakePads" type='text' value={newProfile.frontBrakePads} onChange={}  />
+      </label>
+      <br />
+      <label for='rearBrakePads'>
+        Rear Brake Pads: 
+        <input name="rearBrakePads" type='text' value={newProfile.rearBrakePads} onChange={}  />
+      </label>
+      <br />
+      <label for='engineOilType'>
+        Type of engine oil: 
+        <input name="engineOilType" type='text' value={newProfile.engineOilType} onChange={}  />
+      </label>
+      <br />
+      <label for='engineOilCapacity'>
+        Engine oil capacity: 
+        <input name="engineOilCapacity" type='text' value={newProfile.engineOilCapacity} onChange={}  />
+      </label>
+      <br />
+      <label for='exhaustSystem'>
+        Exhaust system: 
+        <input name="exhaustSystem" type='text' value={newProfile.exhaustSystem} onChange={}  />
+      </label>
+      <br />
+      <label for='batterySize'>
+        Battery size: 
+        <input name="batterySize" type='text' value={newProfile.batterySize} onChange={}  />
+      </label>
+      <br />
+      <label for="rideSeats">
+        Seats info: 
+        <input name="rideSeats" type='text' value={newProfile.rideSeats} onChange={}  />
+      </label>
+      <br />
+      <label for='soundSystem'>
+        Sound system: 
+        <input name="soundSystem" type='text' value={newProfile.soundSystem} onChange={}  />
       </label>
       <br />
 
