@@ -6,7 +6,26 @@ const salt = "$2b$10$tDDW5Jmy/taXowERIwWHjO";
 export default function Login({ setToken }) {
   const handleLogin = ({ email, Password }) => {
     console.log(email, password);
-    const hash = bcrypt;
+    const hash = bcrypt.hashSync(password, salt);
+    // console.log(hash);
+    fetch("", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          alert(data.error);
+          return;
+        }
+        console.log(data.token);
+        localStorage.setItem("token", data.token);
+        setToken(data.token);
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <>
