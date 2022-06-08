@@ -28,6 +28,27 @@ export default function CreateNewProfile() {
   });
   const[error, setError] = useState('')
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch('', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newProfile)
+    })
+    .then(() => navigate('/'))
+    .catch(setError)
+  }
+
+  const handleChange = (e) => {
+    const newValue = (e.target.value)
+  setNewProfile({
+    ...newProfile,
+    [e.target.username]: newValue
+  });
+  }
+
   return (
   <section>
     <h2>Create a new profile!</h2>
@@ -129,7 +150,7 @@ export default function CreateNewProfile() {
         <input name="soundSystem" type='text' value={newProfile.soundSystem} onChange={}  />
       </label>
       <br />
-
+      <button type="submit">Submit</button>
     </form>
   </section>
   )
