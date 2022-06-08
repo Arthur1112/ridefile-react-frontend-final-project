@@ -5,8 +5,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProfileButton from "./components/ProfileButton";
 import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [token, setToken] = useState("");
+  useEffect(() => {
+    const _token = localStorage.getItem("token");
+    if (_token) {
+      setToken(_token);
+    }
+  }, []);
   return (
     <BrowserRouter>
       <MenuBar />

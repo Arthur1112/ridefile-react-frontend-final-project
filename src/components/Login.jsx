@@ -1,7 +1,6 @@
 import { Button, Form, Input } from "antd";
 import bcrypt from "bcryptjs";
-
-const salt = "$2b$10$tDDW5Jmy/taXowERIwWHjO";
+import salt from "../mySalt";
 
 export default function Login({ setToken }) {
   const handleLogin = ({ email, Password }) => {
