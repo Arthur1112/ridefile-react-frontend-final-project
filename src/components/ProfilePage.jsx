@@ -1,4 +1,3 @@
-import { Paper } from "@mui/material";
 import { useEffect, useState } from "react";
 import "../styling/profilePage.css";
 
