@@ -1,6 +1,13 @@
-import { Form, Input } from "antd";
+import { Button, Form, Input } from "antd";
+import bcrypt from "bcryptjs";
 
-export default function Login() {
+const salt = "$2b$10$tDDW5Jmy/taXowERIwWHjO";
+
+export default function Login({ setToken }) {
+  const handleLogin = ({ email, Password }) => {
+    console.log(email, password);
+    const hash = bcrypt;
+  };
   return (
     <>
       <h1>Login Please</h1>
@@ -15,6 +22,11 @@ export default function Login() {
         </Form.Item>
         <Form.Item name="password" label="Password">
           <Input.Password />
+        </Form.Item>
+        <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
+          <Button type="Primary" htmlType="submit">
+            Login
+          </Button>
         </Form.Item>
       </Form>
     </>
