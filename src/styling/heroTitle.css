@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@100;500;700&display=swap");
 
-body {
-  background-color: black;
-}
-
 *,
 *:after,
 *:before {
@@ -14,6 +10,7 @@ h1 {
   font-family: "DM Serif Display", serif;
   animation: flicker 1.5s infinite alternate;
   padding: 2%;
+  --neon-border-color: rgb(255, 0, 0);
   margin-top: 120px;
   margin-bottom: 420px;
   /* border-color: rgb(187, 187, 187); */
@@ -30,10 +27,6 @@ h1 {
     0.035em 0.035em 0 rgba(0, 0, 0, 12%);
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
-}
-
-:root {
-  --neon-border-color: rgb(255, 0, 0);
 }
 
 h1::-moz-selection {

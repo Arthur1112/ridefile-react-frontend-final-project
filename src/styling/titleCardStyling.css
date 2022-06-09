@@ -58,6 +58,8 @@ h1 {
 
 section {
   display: flex;
+  /* padding-top: 50px; */
+  backdrop-filter: blur(50px);
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
