@@ -3,7 +3,7 @@ import HeroTitle from "./HeroTitle";
 
 export default function HeroPage() {
   return (
-    <>
+    <section className="mainPage">
       <HeroTitle />
       <section>
         <div id="columnOne">
@@ -34,6 +34,6 @@ export default function HeroPage() {
           </p>
         </div>
       </section>
-    </>
+    </section>
   );
 }

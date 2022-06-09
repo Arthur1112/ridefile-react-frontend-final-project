@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "../styling/profilePage.css";
+import Login from "./Login";
 
-export default function ProfilePage() {
+export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
   useEffect(() => {
     fetch("http://localhost:5050/profile")
@@ -9,10 +10,12 @@ export default function ProfilePage() {
       .then((data) => setProfile(data))
       .catch(console.error);
   }, []);
-  console.log(profile);
+  // console.log(profile);
   return (
     <section id="mainFlexContainer">
-      {!profile ? (
+      {!token ? (
+        <Login />
+      ) : !profile ? (
         <h2>Loading...</h2>
       ) : (
         <>

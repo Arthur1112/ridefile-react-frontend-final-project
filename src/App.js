@@ -17,29 +17,17 @@ function App() {
       setToken(_token);
     }
   }, []);
-  console.log(token);
   return (
     <BrowserRouter>
       <MenuBar />
       <section>
         <Routes>
+          <Route path="/" element={<HeroPage />} />
           <Route
-            style={{
-              background: "url('https://w.wallha.com/ws/11/56tXTAlV.jpg')",
-              backgroundPosition: "center",
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }}
-            path="/"
-            element={
-              <>
-                <HeroPage />
-                <ProfileButton />
-              </>
-            }
+            path="/login"
+            element={<div>{!token ? <Login /> : <ProfilePage />}</div>}
           />
           <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/newProfile" element={<CreateNewProfile />} />
         </Routes>
       </section>
