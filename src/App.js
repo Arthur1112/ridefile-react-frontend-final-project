@@ -22,9 +22,9 @@ function App() {
       <MenuBar />
       <section>
         <Routes>
-          {/* <Route path="/" element={<HeroPage />} /> */}
+          <Route path="/" element={<HeroPage />} />
           <Route
-            path="/"
+            path="/login"
             element={
               <div>
                 {!token ? (

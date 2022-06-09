@@ -8,10 +8,10 @@ export default function Login({ setToken }) {
     console.log(email, password);
     const hash = bcrypt.hashSync(password, salt);
     console.log(hash);
-    fetch("http://localhost:5050/login", {
+    fetch("http://localhost:7050/login", {
       method: "POST",
       headers: {
-        Accept: "application/json",
+        // Accept: "application/json",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ email, password: hash }),

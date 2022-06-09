@@ -5,7 +5,7 @@ import Login from "./Login";
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
   useEffect(() => {
-    fetch("http://localhost:5050/profile")
+    fetch("http://localhost:7050/profile")
       .then((response) => response.json())
       .then((data) => setProfile(data))
       .catch(console.error);
