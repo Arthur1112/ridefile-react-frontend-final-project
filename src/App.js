@@ -22,10 +22,18 @@ function App() {
       <MenuBar />
       <section>
         <Routes>
-          <Route path="/" element={<HeroPage />} />
+          {/* <Route path="/" element={<HeroPage />} /> */}
           <Route
-            path="/login"
-            element={<div>{!token ? <Login /> : <ProfilePage />}</div>}
+            path="/"
+            element={
+              <div>
+                {!token ? (
+                  <Login setToken={setToken} />
+                ) : (
+                  <ProfilePage token={token} />
+                )}
+              </div>
+            }
           />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/newProfile" element={<CreateNewProfile />} />
