@@ -1,6 +1,7 @@
 import { Button, Form, Input } from "antd";
 import bcrypt from "bcryptjs";
 import { salt } from "../mySalt";
+import "../styling/loginPage.css";
 
 export default function Login({ setToken }) {
   const handleLogin = ({ email, password }) => {
@@ -28,7 +29,7 @@ export default function Login({ setToken }) {
       .catch((err) => console.log(err));
   };
   return (
-    <>
+    <section className="loginSection">
       <h3>Login Please</h3>
       <Form
         name="login"
@@ -48,6 +49,6 @@ export default function Login({ setToken }) {
           </Button>
         </Form.Item>
       </Form>
-    </>
+    </section>
   );
 }
