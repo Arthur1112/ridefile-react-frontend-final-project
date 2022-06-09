@@ -7,14 +7,14 @@ export default function MenuBar() {
   return (
     <>
       <input
-        class="menu-icon"
+        className="menu-icon"
         type="checkbox"
         id="menu-icon"
         name="menu-icon"
       />
-      <label for="menu-icon"></label>
-      <nav class="nav">
-        <ul class="pt-5">
+      <label htmlFor="menu-icon"></label>
+      <nav className="nav">
+        <ul className="pt-5">
           <li>
             <a onClick={() => navigate("/login")}>Login</a>
           </li>

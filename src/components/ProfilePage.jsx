@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styling/profilePage.css";
 import Login from "./Login";
+import LogoutButton from "./LogoutButton";
 
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
@@ -67,6 +68,7 @@ export default function ProfilePage({ token }) {
           </dl>
         </>
       )}
+      <LogoutButton />
     </section>
   );
 }

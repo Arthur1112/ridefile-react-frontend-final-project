@@ -9,6 +9,9 @@
     0.035em 0.035em 0 rgba(0, 0, 0, 12%);
 }
 
+/* background: rgb(36,0,0);
+background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(129,0,0,1) 46%); */
+
 .loginSection {
   display: grid;
   justify-content: center;
