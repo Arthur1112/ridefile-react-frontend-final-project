@@ -1,3 +1,14 @@
+#loginPageTitle {
+  font-family: "DM Serif Display", serif;
+  font-size: 2vw;
+  font-weight: 900;
+  text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
+    0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
+    0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
+    0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
+    0.035em 0.035em 0 rgba(0, 0, 0, 12%);
+}
+
 .loginSection {
   display: grid;
   justify-content: center;
@@ -10,13 +21,12 @@
   padding: 20%;
   --neon-border-color: rgb(255, 0, 0);
   border: 0.2rem solid #fff;
-  text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
-    0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
-    0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
-    0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
-    0.035em 0.035em 0 rgba(0, 0, 0, 12%);
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+}
+
+.Form {
+  color: blue;
 }
 
 @keyframes flicker {

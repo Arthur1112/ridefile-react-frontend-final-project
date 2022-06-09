@@ -1,4 +1,4 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Select } from "antd";
 import bcrypt from "bcryptjs";
 import { salt } from "../mySalt";
 import "../styling/loginPage.css";
@@ -30,19 +30,21 @@ export default function Login({ setToken }) {
   };
   return (
     <section className="loginSection">
-      <h3>Login Please</h3>
+      <h3 id="loginPageTitle">Login</h3>
       <Form
         name="login"
         labelCol={{ span: 8 }}
         wrapperCol={{ span: 8 }}
         onFinish={handleLogin}
       >
-        <Form.Item name="email" label="Email">
-          <Input />
+        <Form.Item name="email">
+          <Input placeholder="Email" />
         </Form.Item>
-        <Form.Item name="password" label="Password">
-          <Input.Password />
+        <br />
+        <Form.Item name="password">
+          <Input.Password placeholder="Password" />
         </Form.Item>
+        <br />
         <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
           <Button type="Primary" htmlType="submit">
             Login
