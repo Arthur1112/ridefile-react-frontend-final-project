@@ -7,6 +7,7 @@ export default function LogoutButton({ token }) {
       onClick={() => {
         localStorage.clear();
         navigate("/login");
+        window.location.reload();
       }}
     >
       Logout

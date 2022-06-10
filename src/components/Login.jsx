@@ -1,28 +1,21 @@
 import { Button, Form, Input } from "antd";
-import { useEffect } from "react";
-// import bcrypt from "bcryptjs";
-// import { salt } from "../mySalt";
 import "../styling/loginPage.css";
-import ProfilePage from "./ProfilePage";
 
 export default function Login({ token, setToken }) {
-  useEffect(() => {
-    if (token) {
-      // redirect them to /profile
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (token) {
+  //     // redirect them to /profile
+  //   }
+  // }, []);
 
   const handleLogin = ({ email, password }) => {
-    //console.log(email, password);
-    // const hash = bcrypt.hashSync(password, salt);
-    const hash = password;
-    //console.log(hash);
+    console.log(email, password);
     fetch("http://localhost:7050/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password: hash }),
+      body: JSON.stringify({ email, password }),
     })
       .then((res) => res.json())
       .then((data) => {

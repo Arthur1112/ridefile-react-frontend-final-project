@@ -2,7 +2,7 @@ import "./App.css";
 import "./styling/styling.css";
 import HeroPage from "./components/HeroPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ProfileButton from "./components/ProfileButton";
+// import ProfileButton from "./components/ProfileButton";
 import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
 import { useEffect, useState } from "react";
@@ -25,16 +25,16 @@ function App() {
           <Route path="/" element={<HeroPage />} />
           <Route
             path="/login"
-            element={<Login />}
-            // element={
-            //   <div>
-            //     {!token ? (
-            //       <Login setToken={setToken} />
-            //     ) : (
-            //       <ProfilePage token={token} />
-            //     )}
-            //   </div>
-            //}
+            // element={<Login setToken={setToken} />}
+            element={
+              <div>
+                {!token ? (
+                  <Login setToken={setToken} />
+                ) : (
+                  <ProfilePage token={token} />
+                )}
+              </div>
+            }
           />
           <Route path="/profile" element={<ProfilePage />} />
           <Route path="/newProfile" element={<CreateNewProfile />} />
