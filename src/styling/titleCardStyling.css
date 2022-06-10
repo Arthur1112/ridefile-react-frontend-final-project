@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@100;500;700&display=swap");
 
 .mainPage {
-  background: url("https://w.wallha.com/ws/11/56tXTAlV.jpg") no-repeat center
-    fixed;
+  /* background: url("https://w.wallha.com/ws/11/56tXTAlV.jpg") no-repeat center
+    fixed; */
   background-size: cover;
-  background-color: rgb(60, 54, 55);
+  /* background-color: rgb(60, 54, 55); */
 }
 
 :root {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(rgb(0, 0, 0) 0%, transparent 100%); */
+  z-index: 2;
   background: linear-gradient(
-    90deg,
     rgba(232, 232, 232, 1) 0%,
     rgba(251, 24, 24, 1) 86%
   );
