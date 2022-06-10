@@ -37,7 +37,7 @@ export default function Login({ token, setToken }) {
       .catch((err) => console.log(err));
   };
   return (
-    <section>
+    <section id="loginContainer">
       {!token ? (
         <section className="loginSection">
           <h2 id="loginPageTitle">RideFile</h2>
