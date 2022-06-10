@@ -1,15 +1,22 @@
 import { Button, Form, Input } from "antd";
+import { useEffect } from "react";
 // import bcrypt from "bcryptjs";
 // import { salt } from "../mySalt";
 import "../styling/loginPage.css";
 import ProfilePage from "./ProfilePage";
 
 export default function Login({ token, setToken }) {
+  useEffect(() => {
+    if (token) {
+      // redirect them to /profile
+    }
+  }, []);
+
   const handleLogin = ({ email, password }) => {
-    console.log(email, password);
+    //console.log(email, password);
     // const hash = bcrypt.hashSync(password, salt);
     const hash = password;
-    console.log(hash);
+    //console.log(hash);
     fetch("http://localhost:7050/login", {
       method: "POST",
       headers: {
@@ -32,8 +39,6 @@ export default function Login({ token, setToken }) {
   return (
     <section>
       {!token ? (
-        <ProfilePage />
-      ) : (
         <section className="loginSection">
           <h3 id="loginPageTitle">Login</h3>
           <Form
@@ -43,20 +48,22 @@ export default function Login({ token, setToken }) {
             onFinish={handleLogin}
           >
             <Form.Item name="email">
-              <Input placeholder="Email" />
+              <Input id="loginInput" placeholder="Email" />
             </Form.Item>
             <br />
             <Form.Item name="password">
-              <Input.Password placeholder="Password" />
+              <Input.Password id="loginInput" placeholder="Password" />
             </Form.Item>
             <br />
             <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
-              <Button type="Primary" htmlType="submit">
+              <Button id="loginButton" htmlType="submit">
                 Login
               </Button>
             </Form.Item>
           </Form>
         </section>
+      ) : (
+        <>You'll be redirected soon</>
       )}
     </section>
   );

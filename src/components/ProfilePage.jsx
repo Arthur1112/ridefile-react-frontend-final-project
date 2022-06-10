@@ -15,7 +15,7 @@ export default function ProfilePage({ token }) {
   return (
     <section id="mainFlexContainer">
       {!token ? (
-        <Login />
+        <>Go to /login</>
       ) : !profile ? (
         <h2>Loading...</h2>
       ) : (
