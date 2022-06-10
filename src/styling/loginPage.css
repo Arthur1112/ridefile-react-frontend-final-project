@@ -1,35 +1,32 @@
-/* #loginPageTitle {
+#loginPageTitle {
   font-family: Assistant, sans-serif;
-  display: flex;
-  border-radius: 8px;
-  padding: 50px;
-  background: linear-gradient(
-    90deg,
-    rgba(36, 0, 0, 1) 0%,
-    rgba(129, 0, 0, 1) 46%
-  );
-  margin: auto;
   color: #fff;
-} */
-
-/* background: rgb(36,0,0);
-background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(129,0,0,1) 46%); */
+  font-size: 2em;
+  font-weight: 900;
+  text-shadow: -0.0075em 0.1575em 0 rgba(0, 0, 0, 0.24),
+    0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
+    0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
+    0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
+    0.035em 0.035em 0 rgba(0, 0, 0, 12%);
+}
 
 #loginInput {
+  margin-top: 10%;
   border: none;
   background: 0 0;
   box-shadow: 0 2px 0 0 #fff;
-  width: 100%;
+  width: 91%;
   color: #fff;
   font-size: 1em;
   outline: none;
 }
 
 #loginButton {
+  font-weight: 900;
   background: 0 0;
-  text-decoration: none;
   color: #fff;
   box-shadow: 0 0 0 2px #fff;
+  --neon-border-color: rgba(0, 0, 0, 0.255);
   border-radius: 3px;
   padding: 5px 2em;
   transition: 0.5s;
@@ -37,32 +34,26 @@ background: linear-gradient(90deg, rgba(36,0,0,1) 0%, rgba(129,0,0,1) 46%); */
 
 .loginSection {
   font-family: Assistant, sans-serif;
-  display: flex;
+  display: grid;
   border-radius: 8px;
-  padding: 50px;
+  padding: 80px;
   background: linear-gradient(
     90deg,
     rgba(36, 0, 0, 1) 0%,
-    rgba(129, 0, 0, 1) 46%
+    rgba(255, 53, 53, 1) 100%
   );
   margin: auto;
   color: #fff;
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 40vw;
   border-style: solid;
   border-color: black;
-  animation: flicker 2s infinite alternate;
-  padding: 20%;
-  --neon-border-color: rgb(255, 0, 0);
-  border: 0.2rem solid #fff;
+  animation: flicker 1.5s infinite alternate;
+  --neon-border-color: rgba(0, 0, 0, 0.255);
+  border: 0.1rem solid #fff;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
-}
-
-.Form {
-  color: blue;
 }
 
 @keyframes flicker {

@@ -5,7 +5,7 @@ export default function HeroPage() {
   return (
     <section className="mainPage">
       <HeroTitle />
-      <section>
+      <section id="titleCardSection">
         <div id="columnOne">
           <img src="https://wallpapercave.com/wp/wp8333356.jpg" alt="" />
           <p>

@@ -8,12 +8,10 @@
 }
 
 :root {
-  background: rgb(24, 2, 2);
   background: linear-gradient(
     90deg,
-    rgba(24, 2, 2, 1) 0%,
-    rgba(83, 6, 6, 1) 45%,
-    rgba(75, 0, 0, 1) 100%
+    rgba(232, 232, 232, 1) 0%,
+    rgba(251, 24, 24, 1) 86%
   );
 }
 
@@ -66,7 +64,7 @@ h1 {
   height: 0;
 }
 
-section {
+#titleCardSection {
   display: flex;
   /* padding-top: 50px; */
   backdrop-filter: blur(50px);

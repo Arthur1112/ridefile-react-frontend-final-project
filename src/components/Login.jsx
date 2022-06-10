@@ -40,7 +40,8 @@ export default function Login({ token, setToken }) {
     <section>
       {!token ? (
         <section className="loginSection">
-          <h3 id="loginPageTitle">Login</h3>
+          <h2 id="loginPageTitle">RideFile</h2>
+          <h3>Welcome Back</h3>
           <Form
             name="login"
             labelCol={{ span: 8 }}
