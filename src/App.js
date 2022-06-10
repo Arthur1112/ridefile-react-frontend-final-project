@@ -20,7 +20,7 @@ function App() {
   return (
     <BrowserRouter>
       <MenuBar />
-      <section>
+      <section id="appMainSection">
         <Routes>
           <Route path="/" element={<HeroPage />} />
           <Route
