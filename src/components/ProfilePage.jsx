@@ -6,7 +6,7 @@ import LogoutButton from "./LogoutButton";
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
   useEffect(() => {
-    fetch("http://localhost:7050/profile")
+    fetch("https://ridefile-final-project-as.web.app/profile")
       .then((response) => response.json())
       .then((data) => setProfile(data))
       .catch(console.error);

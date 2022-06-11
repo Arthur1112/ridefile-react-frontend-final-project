@@ -1,12 +1,12 @@
-body {
-  /* background: url("https://w.wallha.com/ws/11/56tXTAlV.jpg") no-repeat center
+/* body {
+  background: url("https://w.wallha.com/ws/11/56tXTAlV.jpg") no-repeat center
     fixed;
-  background-size: cover; */
+  background-size: cover;
   background: linear-gradient(
     rgba(232, 232, 232, 1) 0%,
     rgba(251, 24, 24, 1) 86%
   );
-}
+} */
 
 /* section#appMainSection {
   background-color: rgb(60, 54, 55);

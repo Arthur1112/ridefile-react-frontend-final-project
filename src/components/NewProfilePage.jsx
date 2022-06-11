@@ -33,7 +33,7 @@ export default function CreateNewProfile() {
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
-    fetch("http://localhost:5050/addNewProfile", {
+    fetch("https://ridefile-final-project-as.web.app/addNewProfile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
