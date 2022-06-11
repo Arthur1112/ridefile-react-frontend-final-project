@@ -3,10 +3,10 @@ import HeroTitle from "./HeroTitle";
 
 export default function HeroPage() {
   return (
-    <section className="mainPage">
+    <section>
       <HeroTitle />
-      <main>
-        <div id="card">
+      <main id="titleCardSection">
+        <div id="card1">
           <div id="info">
             <h4 id="title">Column One</h4>
             <p id="description">
@@ -20,7 +20,7 @@ export default function HeroPage() {
             </p>
           </div>
         </div>
-        <div id="card">
+        <div id="card2">
           <div id="info">
             <h4 id="title">Column One</h4>
             <p id="description">
@@ -34,7 +34,7 @@ export default function HeroPage() {
             </p>
           </div>
         </div>
-        <div id="card">
+        <div id="card3">
           <div id="info">
             <h4 id="title">Column One</h4>
             <p id="description">
