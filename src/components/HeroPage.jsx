@@ -1,15 +1,21 @@
-import "../styling/titleCardStyling.css";
+import "../styling/titleCards2.0.css";
 import HeroTitle from "./HeroTitle";
+import { ReactComponent as YourSvg } from "../svg/carDashboardIconsSvg/trunk.svg";
 
 export default function HeroPage() {
   return (
     <section>
       <HeroTitle />
-      <main id="titleCardSection">
-        <div id="card1">
-          <div id="info">
-            <h4 id="title">Column One</h4>
-            <p id="description">
+      <main className="container">
+        <div className="card">
+          <div className="face face1">
+            <div>
+              <i class="fab fa-windows"></i>
+              <h3>Windows</h3>
+            </div>
+          </div>
+          <div className="face face2">
+            <p className="content">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               esse corporis, velit porro impedit laudantium accusamus! Id velit,
               illum magni rem mollitia blanditiis iste maiores optio ipsa, est
@@ -20,10 +26,15 @@ export default function HeroPage() {
             </p>
           </div>
         </div>
-        <div id="card2">
-          <div id="info">
-            <h4 id="title">Column One</h4>
-            <p id="description">
+        <div className="card">
+          <div className="face face1">
+            <div>
+              <YourSvg className="titleSvg" />
+              <h3>About Ridefile</h3>
+            </div>
+          </div>
+          <div className="face face2">
+            <p className="content">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               esse corporis, velit porro impedit laudantium accusamus! Id velit,
               illum magni rem mollitia blanditiis iste maiores optio ipsa, est
@@ -34,10 +45,15 @@ export default function HeroPage() {
             </p>
           </div>
         </div>
-        <div id="card3">
-          <div id="info">
-            <h4 id="title">Column One</h4>
-            <p id="description">
+        <div className="card">
+          <div className="face face1">
+            <div>
+              <i class="fab fa-windows"></i>
+              <h3>Windows</h3>
+            </div>
+          </div>
+          <div className="face face2">
+            <p className="content">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
               esse corporis, velit porro impedit laudantium accusamus! Id velit,
               illum magni rem mollitia blanditiis iste maiores optio ipsa, est
@@ -48,24 +64,6 @@ export default function HeroPage() {
             </p>
           </div>
         </div>
-        {/* <div id="columnOne">
-          <img src="https://wallpapercave.com/wp/wp8333429.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Dignissimos, blanditiis soluta iste quae aliquid libero alias
-            officia eius? Quasi, non. Reprehenderit dolor itaque voluptate
-            voluptates ea! Facere reprehenderit delectus quisquam.
-          </p>
-        </div>
-        <div id="columnThree">
-          <img src="https://wallpapercave.com/wp/wp8333524.jpg" alt="" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Dignissimos, blanditiis soluta iste quae aliquid libero alias
-            officia eius? Quasi, non. Reprehenderit dolor itaque voluptate
-            voluptates ea! Facere reprehenderit delectus quisquam.
-          </p>
-        </div> */}
       </main>
     </section>
   );

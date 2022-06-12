@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "../styling/menuBar.css";
+import LogoutButton from "./LogoutButton";
 
 export default function MenuBar() {
   let navigate = useNavigate();
@@ -24,8 +25,11 @@ export default function MenuBar() {
           <li>
             <a onClick={() => navigate("/")}>Home</a>
           </li>
-          <li>
+          {/* <li>
             <a onClick={() => navigate("/followers")}>Followers</a>
+          </li> */}
+          <li>
+            <a onClick={() => navigate("/Login")}>Logout</a>
           </li>
         </ul>
       </nav>
