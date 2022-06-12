@@ -21,17 +21,18 @@
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
   animation: flicker 1.5s infinite alternate;
   --neon-border-color: rgb(255, 0, 0); */
-  box-shadow: 0 0 0.2rem rgb(0, 0, 0), 0 0 0.2rem rgb(0, 0, 0), 0 0 2rem #0d0d0d,
+  box-shadow: 0 0 1.2rem rgb(0, 0, 0), 0 0 0.2rem rgb(0, 0, 0), 0 0 2rem #0d0d0d,
     0 0 0.8rem #040404, 0 0 2.8rem #000000, inset 0 0 1.3rem #050505;
 }
 #rideImage {
   bottom: 100%;
   left: 25px;
   z-index: 0;
-  max-width: 90%;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
-    0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
-  --neon-border-color: rgb(255, 0, 0);
+  border-radius: 4%;
+  max-width: 80%;
+  box-shadow: 0 0 1.2rem rgb(255, 255, 255), 0 0 0.2rem rgb(255, 0, 0),
+    0 0 3rem #ff5e00, 0 0 0.8rem #fe1313, 0 0 2.8rem #ff0000,
+    inset 0 0 1.3rem #fe1313;
 }
 #profileImage {
   border-radius: 50%;
@@ -39,11 +40,11 @@
   display: flex;
   /* bottom: 100px; */
   margin: auto;
-  max-width: 30%;
+  max-width: 25%;
   border: 0.1rem solid #fff;
   animation: flicker 1.5s infinite alternate;
-  box-shadow: 0 0 0rem #fff;
-  --neon-border-color: rgb(255, 0, 0);
+  box-shadow: 0 0 0rem rgba(255, 255, 255, 0.305);
+  --neon-border-color: rgba(255, 0, 0, 0.236);
 }
 
 #mainProfileInfo {

@@ -43,7 +43,7 @@ export default function ProfilePage({ token }) {
               </dt>
               <dt id="rideSubInfo">
                 Color : {profile[0].rideColor} | Owner : {profile[0].rideOwner}{" "}
-                | {profile[0].rideTrim}
+                | Vehicle Trim : {profile[0].rideTrim}
               </dt>
               <dt></dt>
             </dl>
