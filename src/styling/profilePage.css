@@ -5,7 +5,46 @@
   border-style: solid;
 } */
 
-.css-172kgz0-MuiPaper-root {
+#notLogedIn {
+  text-shadow: red -2px 0, cyan 2px 0;
+}
+
+#profileImage {
+  border-radius: 50%;
+  bottom: 100%;
+  position: absolute;
+  top: 330px;
+
+  left: 540px;
+  border-style: solid;
+  border-image-repeat: inherit;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to right, #743ad5, #d53a9d);
+  max-width: 150px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  margin: 30px;
+}
+
+#rideImage {
+  bottom: 100%;
+  left: 25px;
+  z-index: -1;
+  max-width: 600px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+#profileMainContainer {
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  border-style: solid;
+  flex-wrap: wrap;
+  width: 600px;
+  justify-content: center;
+  align-self: center;
+}
+
+/* .css-172kgz0-MuiPaper-root {
   background-color: black;
   width: 70%;
 }
@@ -13,7 +52,7 @@
 #rideImage {
   width: 100%;
   height: 100%;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-content: center;
   border-color: brown;
@@ -73,4 +112,4 @@
   width: 70%;
   margin: auto;
   margin-top: 10px;
-}
+} */

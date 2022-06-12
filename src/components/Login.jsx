@@ -10,7 +10,8 @@ export default function Login({ token, setToken }) {
 
   const handleLogin = ({ email, password }) => {
     console.log(email, password);
-    fetch("https://ridefile-final-project-as.web.app/login", {
+    fetch("http://localhost:7050/login", {
+      // fetch("https://ridefile-final-project-as.web.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -42,7 +42,7 @@
 
 #card1 {
   border-radius: 16px;
-  margin: 60px;
+  margin: 20px;
   /* max-width: 100%; */
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
@@ -52,39 +52,37 @@
 }
 #card2 {
   border-radius: 16px;
-  margin: 60px;
+  margin: 20px;
   /* max-width: 100%; */
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
   overflow: hidden;
-  background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
-  background-size: center;
+  background-image: url(https://www.drifted.com/wp-content/uploads/2019/09/mazda-miata-mx5-ls-engine-swap_best-tuner-cars.jpg);
+  background-size: contain;
 }
 #card3 {
   border-radius: 16px;
-  margin: 60px;
+  margin: 20px;
   /* max-width: 100%; */
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
   overflow: hidden;
-  background-image: url(https://source.unsplash.com/collection/905011/1000x1000);
+  background-image: url(https://www.drifted.com/wp-content/uploads/2019/09/nissan-skyline-r34-gtr-paul-walker-garage-bmw-e36-e30-toyota-supra_best-tuner-cars.jpg);
   background-size: cover;
 }
 
 #info {
   position: relative;
-  width: 100%;
   background-color: #fff;
   transform: translateY(100%) translateY(-88px) translateZ(0);
   transition: transform 0.5s ease-out;
+  height: 330px;
 }
 
 #info:before {
   z-index: -1;
-  display: block;
   position: absolute;
   content: " ";
-  width: 100%;
   overflow: hidden;
   filter: blur(10px);
   opacity: 0.25;

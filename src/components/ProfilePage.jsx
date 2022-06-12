@@ -6,7 +6,8 @@ import LogoutButton from "./LogoutButton";
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
   useEffect(() => {
-    fetch("https://ridefile-final-project-as.web.app/profile")
+    fetch("http://localhost:7050/profile")
+      // fetch("https://ridefile-final-project-as.web.app/profile")
       .then((response) => response.json())
       .then((data) => setProfile(data))
       .catch(console.error);
@@ -15,20 +16,14 @@ export default function ProfilePage({ token }) {
   return (
     <section id="mainFlexContainer">
       {!token ? (
-        <>Go to /login</>
+        <h2 id="notLogedIn">Go to /login</h2>
       ) : !profile ? (
         <h2>Loading...</h2>
       ) : (
-        <>
-          <img
-            id="rideImage"
-            src="https://s.aolcdn.com/dims-global/dims3/GLOB/legacy_thumbnail/788x525/quality/85/https://s.aolcdn.com/commerce/autodata/images/CAC20FOC051B0101.jpg"
-          />
+        <section id="profileMainContainer">
+          <img id="rideImage" src={profile[0].rideImage} />
           <div>
-            <img
-              id="profileImage"
-              src="https://www.ndstudies.gov/gr4/sites/default/files/unit1/img/45-TR_portrait.jpg"
-            />
+            <img id="profileImage" src={profile[0].profileImage} />
             <dl id="mainProfileInfo">
               <dt id="rideMainInfo">
                 {profile[0].rideYear} {profile[0].rideMake}{" "}
@@ -66,7 +61,7 @@ export default function ProfilePage({ token }) {
             <dt>Battery Size</dt>
             <dd>{profile[0].batterySize}</dd>
           </dl>
-        </>
+        </section>
       )}
       <LogoutButton />
     </section>
