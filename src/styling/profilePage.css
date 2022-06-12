@@ -34,8 +34,12 @@
   left: 25px;
   z-index: 0;
   max-width: 100%;
-  border-style: solid;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0);
+  border: 0.2rem solid #fff;
+  animation: flicker 1.5s infinite alternate;
+
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
+    0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+  --neon-border-color: rgb(255, 0, 0);
 }
 #profileImage {
   border-radius: 50%;
@@ -90,6 +94,10 @@
 #rideSubInfo {
   /* border-style: solid;
   border-color: red; */
+  border: none;
+  background: 0 0;
+  padding-bottom: 30px;
+  box-shadow: 0 2px 0 0 rgb(0, 0, 0);
   text-shadow: -0.0075em 0.0575em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%);
   margin: auto;
@@ -111,6 +119,51 @@
 #extraProfileInfo {
   border-style: solid;
   border-color: blue;
+  width: 80%;
+  margin-top: -80px;
+}
+
+#extraProfileInfo h2 {
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  /* width: auto;
+  animation: flicker 1.5s infinite alternate;
+  stroke: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313, 0 0 0.8rem #fe1313,
+    0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+  --neon-border-color: rgb(255, 0, 0); */
+  stroke: #fff;
+  animation-name: animate;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  stroke-width: 5px;
+  width: 15%;
+  border-style: solid;
+}
+
+.tabIconContainer {
+  display: flex;
+  border-style: solid;
+}
+
+.tabIconDescription {
+  display: flex;
+  border-style: solid;
+}
+
+@keyframes animate {
+  0% {
+    filter: drop-shadow(0px 0px 1px rgb(255, 0, 0))
+      drop-shadow(0px 0px 3px rgb(255, 0, 0)) drop-shadow(0px 0px 10px #ff0000);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff)
+      drop-shadow(0px 0px 15px #ef0000);
+  }
 }
 
 @keyframes flicker {

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../styling/profilePage.css";
 import Login from "./Login";
 import LogoutButton from "./LogoutButton";
+import { ReactComponent as YourSvg } from "../svg/carDashboardIconsSvg/trunk.svg";
 
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
@@ -38,7 +39,10 @@ export default function ProfilePage({ token }) {
           </div>
           <dl id="extraProfileInfo">
             <h2>Custom / Stock Vehicle Specs</h2>
-            <dt>Transmission:</dt>
+            <dt className="tabIconContainer">
+              <YourSvg />
+              <p className="tabIconDescription">Transmission:</p>
+            </dt>
             <dd>{profile[0].transmission}</dd>
             <dt>Exhaust System</dt>
             <dd>{profile[0].exhaustSystem}</dd>
