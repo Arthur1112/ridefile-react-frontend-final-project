@@ -33,9 +33,8 @@ export default function ProfilePage({ token }) {
               <dt>Owner : {profile[0].rideOwner}</dt>
             </dl>
           </div>
-          <br />
-          <h2>Custom / Stock Vehicle Specs</h2>
           <dl id="extraProfileInfo">
+            <h2>Custom / Stock Vehicle Specs</h2>
             <dt>Transmission:</dt>
             <dd>{profile[0].transmission}</dd>
             <dt>Exhaust System</dt>
