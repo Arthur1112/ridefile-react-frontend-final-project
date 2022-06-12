@@ -82,14 +82,28 @@ export default function ProfilePage({ token }) {
               <p className="tabIconDescription">Front Brake Pad:</p>
               <p className="tabIconDescription">{profile[0].frontBrakePads}</p>
             </dt>
-            <dt>Rear Brake Pad</dt>
-            <dd>{profile[0].rearBrakePads}</dd>
-            <dt>Engine Oil</dt>
-            <dd>{profile[0].engineOilType}</dd>
-            <dt>Engine Capacity</dt>
-            <dd>{profile[0].engineOilCapacity}</dd>
-            <dt>Battery Size</dt>
-            <dd>{profile[0].batterySize}</dd>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Rear Brake Pad:</p>
+              <p className="tabIconDescription">{profile[0].RearBrakePads}</p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Engine Oil:</p>
+              <p className="tabIconDescription">{profile[0].engineOilType}</p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Engine Capacity:</p>
+              <p className="tabIconDescription">
+                {profile[0].engineOilCapacity}
+              </p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Battery Size:</p>
+              <p className="tabIconDescription">{profile[0].batterySize}</p>
+            </dt>
           </dl>
         </section>
       )}
