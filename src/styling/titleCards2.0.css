@@ -26,11 +26,19 @@
   width: 450px;
   height: 200px;
   transition: 0.4s;
+  /* animation: flicker 10000s infinite alternate;
+  stroke: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313, 0 0 0.8rem #fe1313,
+    0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+  --neon-border-color: rgba(13, 255, 0, 0.527); */
+  box-shadow: 0 0 1.2rem rgb(255, 255, 255), 0 0 0.2rem rgb(255, 0, 0),
+    0 0 3rem #ff5e00, 0 0 0.8rem #fe1313, 0 0 2.8rem #ff0000,
+    inset 0 0 1.3rem #fe1313;
 }
 
 .container .card .face.face1 {
   position: relative;
-  background: rgb(94, 109, 243);
+  background: rgba(0, 0, 0, 0.219);
+  backdrop-filter: blur(100px);
   display: flex;
   justify-content: center;
   align-content: center;
@@ -40,7 +48,11 @@
 }
 
 .container h3 {
-  position: relative;
+  text-shadow: -0.0075em 0.1575em 0 rgba(0, 0, 0, 0.24),
+    0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
+    0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
+    0.025em 0.025em 0 rgba(0, 0, 0, 18%);
+  color: rgb(3, 2, 2);
 }
 
 .container .card:hover .face.face1 {
