@@ -23,14 +23,17 @@ export default function ProfilePage({ token }) {
         <section id="profileMainContainer">
           <img id="rideImage" src={profile[0].rideImage} />
           <div>
-            <img id="profileImage" src={profile[0].profileImage} />
             <dl id="mainProfileInfo">
+              <img id="profileImage" src={profile[0].profileImage} />
               <dt id="rideMainInfo">
-                {profile[0].rideYear} {profile[0].rideMake}{" "}
-                {profile[0].rideModel} {profile[0].rideTrim}
+                {profile[0].rideYear} {profile[0].rideMake} {""}
+                {profile[0].rideModel}
               </dt>
-              <dt>Color : {profile[0].rideColor}</dt>
-              <dt>Owner : {profile[0].rideOwner}</dt>
+              <dt id="rideSubInfo">
+                Color : {profile[0].rideColor} | Owner : {profile[0].rideOwner}{" "}
+                | {profile[0].rideTrim}
+              </dt>
+              <dt></dt>
             </dl>
           </div>
           <dl id="extraProfileInfo">

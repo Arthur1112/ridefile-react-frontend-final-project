@@ -29,22 +29,6 @@
   animation: flicker 1.5s infinite alternate;
   --neon-border-color: rgb(255, 0, 0); */
 }
-#profileImage {
-  border-radius: 50%;
-  position: relative;
-  display: flex;
-  /* bottom: 100px; */
-  margin: auto;
-  bottom: 20%;
-  right: 25%;
-  max-width: 30%;
-  border: 0.2rem solid #fff;
-  animation: flicker 1.5s infinite alternate;
-  box-shadow: 0 0 0rem #fff, 0 0 0rem #fff, 0 0 2rem #fe1313, 0 0 1.8rem #fe1313,
-    0 0 3.8rem #fe1313, inset 0 0 1.3rem #fe1313;
-  --neon-border-color: rgb(255, 0, 0);
-}
-
 #rideImage {
   bottom: 100%;
   left: 25px;
@@ -52,21 +36,75 @@
   max-width: 100%;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0);
 }
+#profileImage {
+  border-radius: 50%;
+  /* position: relative; */
+  display: flex;
+  /* bottom: 100px; */
+  margin: auto;
+  max-width: 30%;
+  border: 0.1rem solid #fff;
+  animation: flicker 1.5s infinite alternate;
+  box-shadow: 0 0 0rem #fff;
+  --neon-border-color: rgb(255, 0, 0);
+}
 
 #mainProfileInfo {
-  border-style: solid;
-  border-color: blueviolet;
-  width: 50%;
+  /* border-style: solid;
+  border-color: blueviolet; */
+  padding: 5px;
+  color: white;
+  width: 80%;
   position: relative;
-  left: 45%;
-  bottom: 60%;
+  bottom: 40%;
+  margin: auto;
   font-size: 20px;
-  font-weight: bolder;
+  font-weight: 500;
+  /* background: linear-gradient(
+    90deg,
+    rgba(36, 0, 0, 1) 0%,
+    rgba(255, 53, 53, 1) 100%
+  );
+  border: 0.1rem solid #fff;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
+    0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+  animation: flicker 1.5s infinite alternate;
+  --neon-border-color: rgb(255, 0, 0); */
 }
 
 #rideMainInfo {
-  border-style: solid;
-  border-color: red;
+  /* border-style: solid;
+  border-color: red; */
+  text-shadow: -0.0075em 0.1575em 0 rgba(0, 0, 0, 0.24),
+    0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
+    0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
+    0.025em 0.025em 0 rgba(0, 0, 0, 18%);
+  margin: auto;
+  line-height: 2em;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 150%;
+}
+#rideSubInfo {
+  /* border-style: solid;
+  border-color: red; */
+  text-shadow: -0.0075em 0.0575em 0 rgba(0, 0, 0, 0.24),
+    0.005em 0.005em 0 rgba(0, 0, 0, 10%);
+  margin: auto;
+  display: flex;
+  color: rgb(35, 35, 35);
+  justify-content: center;
+  font-size: 100%;
+}
+
+@media (max-width: 1400px) {
+  #mainProfileInfo {
+    bottom: 25%;
+  }
+  #rideMainInfo {
+    color: blue;
+  }
 }
 
 #extraProfileInfo {
