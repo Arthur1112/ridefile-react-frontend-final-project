@@ -4,32 +4,46 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  border-style: solid;
 }
 
-.titleSvg {
-  stroke: rgb(39, 237, 0);
-  animation-name: animate;
-  animation-duration: 0.5s;
+#cardOne .titleSvg {
+  stroke: rgb(237, 122, 0);
+  stroke-width: 3px;
+  animation-name: animateCardOne;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  stroke-width: 5px;
+}
+#cardTwo .titleSvg {
+  stroke: rgb(237, 0, 237);
+  animation-name: animateCardTwo;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  stroke-width: 3px;
+}
+#cardThree .titleSvg {
+  stroke: rgb(21, 255, 0);
+  animation-name: animateCardThree;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  stroke-width: 3px;
 }
 
 .container .card {
   position: relative;
   margin: auto;
-  border-style: solid;
 }
 
 .container .card .face {
   width: 450px;
   height: 200px;
   transition: 0.4s;
-  /* animation: flicker 10000s infinite alternate;
+  animation: flicker 10000s infinite alternate;
   stroke: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313, 0 0 0.8rem #fe1313,
     0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
-  --neon-border-color: rgba(13, 255, 0, 0.527); */
+  --neon-border-color: rgba(255, 0, 0, 0.527);
   box-shadow: 0 0 1.2rem rgb(255, 255, 255), 0 0 0.2rem rgb(255, 0, 0),
     0 0 3rem #ff5e00, 0 0 0.8rem #fe1313, 0 0 2.8rem #ff0000,
     inset 0 0 1.3rem #fe1313;
@@ -52,7 +66,10 @@
     0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
     0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
     0.025em 0.025em 0 rgba(0, 0, 0, 18%);
-  color: rgb(3, 2, 2);
+  color: rgb(251, 251, 251);
+}
+.container p {
+  color: rgb(1, 1, 1);
 }
 
 .container .card:hover .face.face1 {
@@ -72,12 +89,6 @@
   opacity: 1;
 }
 
-.container .card .face.face1 .content i {
-  font-size: 3em;
-  color: white;
-  display: inline-block;
-}
-
 .container .card .face.face1 .content h3 {
   font-size: 1em;
   color: white;
@@ -90,7 +101,7 @@
 
 .container .card .face.face2 {
   position: relative;
-  background: whitesmoke;
+  background: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,4 +137,41 @@ a {
   background: #333;
   color: whitesmoke;
   box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes animateCardOne {
+  0% {
+    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255))
+      drop-shadow(0px 0px 3px rgb(255, 255, 255))
+      drop-shadow(0px 0px 10px #ffffff);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 3px rgb(255, 140, 0))
+      drop-shadow(0px 0px 6px rgb(255, 140, 0));
+  }
+}
+@keyframes animateCardTwo {
+  0% {
+    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255))
+      drop-shadow(0px 0px 3px rgb(255, 255, 255))
+      drop-shadow(0px 0px 10px #ffffff);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 3px rgb(237, 0, 237))
+      drop-shadow(0px 0px 6px rgb(237, 0, 237));
+  }
+}
+@keyframes animateCardThree {
+  0% {
+    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255))
+      drop-shadow(0px 0px 3px rgb(255, 255, 255))
+      drop-shadow(0px 0px 10px #ffffff);
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 3px rgb(21, 255, 0))
+      drop-shadow(0px 0px 6px rgb(21, 255, 0));
+  }
 }

@@ -9,7 +9,7 @@ export default function HeroPage() {
     <section>
       <HeroTitle />
       <main className="container">
-        <div className="card">
+        <div id="cardOne" className="card">
           <div className="face face1">
             <div>
               <YourSvgtitleCardOneSvg className="titleSvg" />
@@ -28,7 +28,7 @@ export default function HeroPage() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div id="cardTwo" className="card">
           <div className="face face1">
             <div>
               <YourSvgtitleCardTwoSvg className="titleSvg" />
@@ -47,7 +47,7 @@ export default function HeroPage() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div id="cardThree" className="card">
           <div className="face face1">
             <div>
               <YourSvgtitleCardThreeSvg className="titleSvg" />
