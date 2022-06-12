@@ -1,4 +1,5 @@
 import { Button, Form, Input } from "antd";
+import { useNavigate } from "react-router-dom";
 import "../styling/loginPage.css";
 
 export default function Login({ token, setToken }) {
@@ -7,6 +8,8 @@ export default function Login({ token, setToken }) {
   //     // redirect them to /profile
   //   }
   // }, []);
+
+  let navigate = useNavigate();
 
   const handleLogin = ({ email, password }) => {
     console.log(email, password);
@@ -50,9 +53,16 @@ export default function Login({ token, setToken }) {
               <Input.Password id="loginInput" placeholder="Password" />
             </Form.Item>
             <br />
+            <br />
             <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
               <Button id="loginButton" htmlType="submit">
                 Login
+              </Button>
+              <br />
+              <br />
+              <p>New to Ridefile?</p>
+              <Button id="loginButton" onClick={() => navigate("/newProfile")}>
+                Sign up now!
               </Button>
             </Form.Item>
           </Form>
