@@ -6,6 +6,14 @@ import { ReactComponent as YourSvg } from "../svg/carDashboardIconsSvg/trunk.svg
 import { ReactComponent as YourSvg2 } from "../svg/carDashboardIconsSvg/rear-window-defrost.svg";
 import { ReactComponent as YourSvg3 } from "../svg/carDashboardIconsSvg/air-conditioning.svg";
 import { ReactComponent as YourSvg4 } from "../svg/carDashboardIconsSvg/fuel.svg";
+import { ReactComponent as YourSvg5 } from "../svg/carDashboardIconsSvg/hazard.svg";
+import { ReactComponent as YourSvg6 } from "../svg/carDashboardIconsSvg/light.svg";
+import { ReactComponent as YourSvg7 } from "../svg/carDashboardIconsSvg/seatbelt.svg";
+import { ReactComponent as YourSvg8 } from "../svg/carDashboardIconsSvg/airbag.svg";
+import { ReactComponent as YourSvg9 } from "../svg/carDashboardIconsSvg/ventilating-fan.svg";
+import { ReactComponent as YourSvg10 } from "../svg/carDashboardIconsSvg/oil.svg";
+import { ReactComponent as YourSvg11 } from "../svg/carDashboardIconsSvg/fuel-filling.svg";
+import { ReactComponent as YourSvg12 } from "../svg/carDashboardIconsSvg/battery.svg";
 
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
@@ -63,44 +71,44 @@ export default function ProfilePage({ token }) {
               <p className="tabIconDescription">{profile[0].rideRimSize}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg5 />
               <p className="tabIconDescription">Rims Info:</p>
               <p className="tabIconDescription">{profile[0].RimsInfo}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg6 />
               <p className="tabIconDescription">Sound System:</p>
               <p className="tabIconDescription">{profile[0].soundSystem}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg7 />
               <p className="tabIconDescription">Seats:</p>
               <p className="tabIconDescription">{profile[0].rideSeats}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg8 />
               <p className="tabIconDescription">Front Brake Pad:</p>
               <p className="tabIconDescription">{profile[0].frontBrakePads}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg9 />
               <p className="tabIconDescription">Rear Brake Pad:</p>
               <p className="tabIconDescription">{profile[0].RearBrakePads}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg10 />
               <p className="tabIconDescription">Engine Oil:</p>
               <p className="tabIconDescription">{profile[0].engineOilType}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg11 />
               <p className="tabIconDescription">Engine Capacity:</p>
               <p className="tabIconDescription">
                 {profile[0].engineOilCapacity}
               </p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg12 />
               <p className="tabIconDescription">Battery Size:</p>
               <p className="tabIconDescription">{profile[0].batterySize}</p>
             </dt>

@@ -117,8 +117,8 @@
 }
 
 #extraProfileInfo {
-  border-style: solid;
-  border-color: blue;
+  /* border-style: solid;
+  border-color: blue; */
   width: 80%;
   margin-top: -80px;
 }
