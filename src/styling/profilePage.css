@@ -96,8 +96,8 @@
   border-color: red; */
   border: none;
   background: 0 0;
-  padding-bottom: 30px;
   box-shadow: 0 2px 0 0 rgb(0, 0, 0);
+  padding-bottom: 30px;
   text-shadow: -0.0075em 0.0575em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%);
   margin: auto;
@@ -140,18 +140,25 @@ svg {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   stroke-width: 5px;
-  width: 15%;
-  border-style: solid;
+  width: 8%;
+  /* border-style: solid; */
 }
 
 .tabIconContainer {
   display: flex;
-  border-style: solid;
+  border: none;
+  background: 0 0;
+  width: 100%;
+  box-shadow: 0 2px 0 0 rgb(0, 0, 0);
+  /* border-style: solid; */
 }
 
 .tabIconDescription {
+  padding: 10px;
   display: flex;
-  border-style: solid;
+  justify-content: center;
+  align-items: center;
+  /* border-style: solid; */
 }
 
 @keyframes animate {

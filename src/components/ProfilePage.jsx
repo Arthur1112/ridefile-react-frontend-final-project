@@ -3,6 +3,9 @@ import "../styling/profilePage.css";
 import Login from "./Login";
 import LogoutButton from "./LogoutButton";
 import { ReactComponent as YourSvg } from "../svg/carDashboardIconsSvg/trunk.svg";
+import { ReactComponent as YourSvg2 } from "../svg/carDashboardIconsSvg/rear-window-defrost.svg";
+import { ReactComponent as YourSvg3 } from "../svg/carDashboardIconsSvg/air-conditioning.svg";
+import { ReactComponent as YourSvg4 } from "../svg/carDashboardIconsSvg/fuel.svg";
 
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
@@ -42,14 +45,23 @@ export default function ProfilePage({ token }) {
             <dt className="tabIconContainer">
               <YourSvg />
               <p className="tabIconDescription">Transmission:</p>
+              <p className="tabIconDescription">{profile[0].transmission}</p>
             </dt>
-            <dd>{profile[0].transmission}</dd>
-            <dt>Exhaust System</dt>
-            <dd>{profile[0].exhaustSystem}</dd>
-            <dt>Tire Size</dt>
-            <dd>{profile[0].rideTireSize}</dd>
-            <dt>Rim Size</dt>
-            <dd>{profile[0].rideRimSize}</dd>
+            <dt className="tabIconContainer">
+              <YourSvg2 />
+              <p className="tabIconDescription">Exhaust System:</p>
+              <p className="tabIconDescription">{profile[0].exhaustSystem}</p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg3 />
+              <p className="tabIconDescription">Tire Size:</p>
+              <p className="tabIconDescription">{profile[0].rideTireSize}</p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Rim Size:</p>
+              <p className="tabIconDescription">{profile[0].rideRimSize}</p>
+            </dt>
             <dt>Rims Info</dt>
             <dd>{profile[0].rideRimsInfo}</dd>
             <dt>Sound System</dt>
