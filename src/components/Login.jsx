@@ -59,7 +59,6 @@ export default function Login({ token, setToken }) {
                 Login
               </Button>
               <br />
-              <br />
               <p>New to Ridefile?</p>
               <Button id="loginButton" onClick={() => navigate("/newProfile")}>
                 Sign up now!
