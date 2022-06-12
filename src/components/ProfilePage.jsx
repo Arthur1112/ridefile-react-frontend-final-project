@@ -62,14 +62,26 @@ export default function ProfilePage({ token }) {
               <p className="tabIconDescription">Rim Size:</p>
               <p className="tabIconDescription">{profile[0].rideRimSize}</p>
             </dt>
-            <dt>Rims Info</dt>
-            <dd>{profile[0].rideRimsInfo}</dd>
-            <dt>Sound System</dt>
-            <dd>{profile[0].soundSystem}</dd>
-            <dt>Seats</dt>
-            <dd>{profile[0].rideSeats}</dd>
-            <dt>Front Brake Pad</dt>
-            <dd>{profile[0].frontBrakePads}</dd>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Rims Info:</p>
+              <p className="tabIconDescription">{profile[0].RimsInfo}</p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Sound System:</p>
+              <p className="tabIconDescription">{profile[0].soundSystem}</p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Seats:</p>
+              <p className="tabIconDescription">{profile[0].rideSeats}</p>
+            </dt>
+            <dt className="tabIconContainer">
+              <YourSvg4 />
+              <p className="tabIconDescription">Front Brake Pad:</p>
+              <p className="tabIconDescription">{profile[0].frontBrakePads}</p>
+            </dt>
             <dt>Rear Brake Pad</dt>
             <dd>{profile[0].rearBrakePads}</dd>
             <dt>Engine Oil</dt>
