@@ -51,64 +51,64 @@ export default function ProfilePage({ token }) {
           <dl id="extraProfileInfo">
             <h2>Custom / Stock Vehicle Specs</h2>
             <dt className="tabIconContainer">
-              <YourSvg />
+              <YourSvg className="dashboardSvg" />
               <p className="tabIconDescription">Transmission:</p>
               <p className="tabIconDescription">{profile[0].transmission}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg2 />
+              <YourSvg2 className="dashboardSvg" />
               <p className="tabIconDescription">Exhaust System:</p>
               <p className="tabIconDescription">{profile[0].exhaustSystem}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg3 />
+              <YourSvg3 className="dashboardSvg" />
               <p className="tabIconDescription">Tire Size:</p>
               <p className="tabIconDescription">{profile[0].rideTireSize}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg4 />
+              <YourSvg4 className="dashboardSvg" />
               <p className="tabIconDescription">Rim Size:</p>
               <p className="tabIconDescription">{profile[0].rideRimSize}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg5 />
+              <YourSvg5 className="dashboardSvg" />
               <p className="tabIconDescription">Rims Info:</p>
               <p className="tabIconDescription">{profile[0].RimsInfo}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg6 />
+              <YourSvg6 className="dashboardSvg" />
               <p className="tabIconDescription">Sound System:</p>
               <p className="tabIconDescription">{profile[0].soundSystem}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg7 />
+              <YourSvg7 className="dashboardSvg" />
               <p className="tabIconDescription">Seats:</p>
               <p className="tabIconDescription">{profile[0].rideSeats}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg8 />
+              <YourSvg8 className="dashboardSvg" />
               <p className="tabIconDescription">Front Brake Pad:</p>
               <p className="tabIconDescription">{profile[0].frontBrakePads}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg9 />
+              <YourSvg9 className="dashboardSvg" />
               <p className="tabIconDescription">Rear Brake Pad:</p>
-              <p className="tabIconDescription">{profile[0].RearBrakePads}</p>
+              <p className="tabIconDescription">{profile[0].rearBrakePads}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg10 />
+              <YourSvg10 className="dashboardSvg" />
               <p className="tabIconDescription">Engine Oil:</p>
               <p className="tabIconDescription">{profile[0].engineOilType}</p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg11 />
+              <YourSvg11 className="dashboardSvg" />
               <p className="tabIconDescription">Engine Capacity:</p>
               <p className="tabIconDescription">
                 {profile[0].engineOilCapacity}
               </p>
             </dt>
             <dt className="tabIconContainer">
-              <YourSvg12 />
+              <YourSvg12 className="dashboardSvg" />
               <p className="tabIconDescription">Battery Size:</p>
               <p className="tabIconDescription">{profile[0].batterySize}</p>
             </dt>
