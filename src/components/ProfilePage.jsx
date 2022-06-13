@@ -18,8 +18,8 @@ import { ReactComponent as YourSvg12 } from "../svg/carDashboardIconsSvg/battery
 export default function ProfilePage({ token }) {
   const [profile, setProfile] = useState();
   useEffect(() => {
-    fetch("http://localhost:7050/profile")
-      // fetch("https://ridefile-final-project-as.web.app/profile")
+    // fetch("http://localhost:7050/profile")
+    fetch("https://ridefile-final-project-as.web.app/profile")
       .then((response) => response.json())
       .then((data) => setProfile(data))
       .catch(console.error);
@@ -117,8 +117,9 @@ export default function ProfilePage({ token }) {
               <p className="tabIconDescription">Battery Size:</p>
               <p className="tabIconDescription">{profile[0].batterySize}</p>
             </dt>
+            <br />
+            <LogoutButton />
           </dl>
-          <LogoutButton />
         </section>
       )}
     </section>
