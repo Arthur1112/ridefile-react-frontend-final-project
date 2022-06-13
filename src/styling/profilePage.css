@@ -1,5 +1,19 @@
 #notLogedIn {
-  text-shadow: red -2px 0, cyan 2px 0;
+  text-shadow: red -3px 0, cyan 4px 0;
+  padding: 10px;
+  font-size: 3em;
+  margin: auto;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#notLoggedInContainer {
+  margin: 200px;
+  display: grid;
+  justify-items: center;
 }
 
 #profileMainContainer {

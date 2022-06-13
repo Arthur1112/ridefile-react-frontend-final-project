@@ -28,7 +28,12 @@ export default function ProfilePage({ token }) {
   return (
     <section id="mainFlexContainer">
       {!token ? (
-        <h2 id="notLogedIn">Go to /login</h2>
+        <div id="notLoggedInContainer">
+          <h3 id="notLogedIn">
+            Error: ??? <br />
+          </h3>
+          <p id="notLogedIn">Please Login First</p>
+        </div>
       ) : !profile ? (
         <h2>Loading...</h2>
       ) : (
@@ -113,9 +118,9 @@ export default function ProfilePage({ token }) {
               <p className="tabIconDescription">{profile[0].batterySize}</p>
             </dt>
           </dl>
+          <LogoutButton />
         </section>
       )}
-      <LogoutButton />
     </section>
   );
 }
