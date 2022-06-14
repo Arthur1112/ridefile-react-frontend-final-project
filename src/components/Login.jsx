@@ -1,18 +1,10 @@
 import { Button, Form, Input } from "antd";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
 import "../styling/loginPage.css";
 
-export default function Login({ token, setToken }) {
-  const { setUser } = useContext(UserContext);
-
-  // useEffect(() => {
-  //   if (token) {
-  //     // redirect them to /profile
-  //   }
-  // }, []);
-
+export default function Login({ token, setToken, setUser }) {
   let navigate = useNavigate();
 
   const handleLogin = ({ email, password }) => {
@@ -35,10 +27,18 @@ export default function Login({ token, setToken }) {
         console.log(data.token);
         localStorage.setItem("token", data.token);
         setToken(data.token);
+        setUser(data.user);
       })
-      .then((res) => setUser(res.user))
       .catch((err) => console.log(err));
   };
+
+  // useEffect(() => {
+  //   const _token = localStorage.getItem("token");
+  //   if (_token) {
+  //     navigate("/profile");
+  //   }
+  // }, []);
+
   return (
     <section id="loginContainer">
       {!token ? (
@@ -66,7 +66,12 @@ export default function Login({ token, setToken }) {
               </Button>
               <br />
               <p>New to Ridefile?</p>
-              <Button id="loginButton" onClick={() => navigate("/newProfile")}>
+              <Button
+                id="loginButton"
+                onClick={() => {
+                  navigate("/newProfile");
+                }}
+              >
                 Sign up now!
               </Button>
             </Form.Item>

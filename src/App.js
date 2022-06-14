@@ -40,7 +40,7 @@ function App() {
                 </div>
               }
             />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/profile" element={<ProfilePage token={token} />} />
             <Route path="/newProfile" element={<CreateNewProfile />} />
             <Route
               path="/newProfileRideInfo"

@@ -15,7 +15,7 @@ import { ReactComponent as YourSvg10 } from "../svg/carDashboardIconsSvg/oil.svg
 import { ReactComponent as YourSvg11 } from "../svg/carDashboardIconsSvg/fuel-filling.svg";
 import { ReactComponent as YourSvg12 } from "../svg/carDashboardIconsSvg/battery.svg";
 
-export default function ProfilePage({ token }) {
+export default function ProfilePage({ token, setUser, user }) {
   const [profile, setProfile] = useState();
   useEffect(() => {
     fetch("http://localhost:7050/profile")
@@ -24,7 +24,7 @@ export default function ProfilePage({ token }) {
       .then((data) => setProfile(data))
       .catch(console.error);
   }, []);
-  // console.log(profile);
+  console.log(profile);
   return (
     <section id="mainFlexContainer">
       {!token ? (
@@ -38,13 +38,13 @@ export default function ProfilePage({ token }) {
         <h2>Loading...</h2>
       ) : (
         <section id="profileMainContainer">
-          <img id="rideImage" src={profile[0].rideImage} />
+          <img id="rideImage" src={setProfile.rideImage} />
           <div>
             <dl id="mainProfileInfo">
-              <img id="profileImage" src={profile[0].profileImage} />
+              <img id="profileImage" src={user.profileImage} />
               <dt id="rideMainInfo">
-                {profile[0].rideYear} {profile[0].rideMake} {""}
-                {profile[0].rideModel}
+                {setProfile.rideYear} {setUser.rideMake} {""}
+                {setProfile.rideModel}
               </dt>
               <dt id="rideSubInfo">
                 Color : {profile[0].rideColor} | Owner : {profile[0].rideOwner}{" "}
