@@ -1,8 +1,12 @@
 import { Button, Form, Input } from "antd";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../App";
 import "../styling/loginPage.css";
 
 export default function Login({ token, setToken }) {
+  const { setUser } = useContext(UserContext);
+
   // useEffect(() => {
   //   if (token) {
   //     // redirect them to /profile
@@ -32,6 +36,7 @@ export default function Login({ token, setToken }) {
         localStorage.setItem("token", data.token);
         setToken(data.token);
       })
+      .then((res) => setUser(res.user))
       .catch((err) => console.log(err));
   };
   return (
