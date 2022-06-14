@@ -16,21 +16,31 @@ export default function MenuBar({ token }) {
       <label htmlFor="menu-icon"></label>
       <nav class="nav">
         <ul class="pt-5">
-          {!token ? (
-            <></>
+          {/* {!token ? (
+            <>
+              <li>
+                <a onClick={() => navigate("/profile")}>Profile</a>
+              </li>
+              <li>
+                <a onClick={() => navigate("/Login")}>Logout</a>
+              </li>
+            </>
           ) : (
             <li>
               <a onClick={() => navigate("/login")}>Login</a>
             </li>
-          )}
+          )} */}
           <li>
             <a onClick={() => navigate("/profile")}>Profile</a>
           </li>
           <li>
-            <a onClick={() => navigate("/")}>Home</a>
+            <a onClick={() => navigate("/Login")}>Logout</a>
           </li>
           <li>
-            <a onClick={() => navigate("/Login")}>Logout</a>
+            <a onClick={() => navigate("/login")}>Login</a>
+          </li>
+          <li>
+            <a onClick={() => navigate("/")}>Home</a>
           </li>
         </ul>
       </nav>

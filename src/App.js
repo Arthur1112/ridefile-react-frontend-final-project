@@ -4,7 +4,7 @@ import HeroPage from "./components/HeroPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
-import { useEffect, useState, createContext } from "react";
+import { createContext, useEffect, useState } from "react";
 import Login from "./components/Login";
 import CreateNewProfile from "./components/NewProfilePage";
 import RideInfoNewProfile from "./components/RideInfoNewProfile";
@@ -40,7 +40,7 @@ function App() {
                 </div>
               }
             />
-            <Route path="/profile" element={<ProfilePage token={token} />} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/newProfile" element={<CreateNewProfile />} />
             <Route
               path="/newProfileRideInfo"
