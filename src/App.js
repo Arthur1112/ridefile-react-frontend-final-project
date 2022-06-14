@@ -6,35 +6,39 @@ import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
 import CreateNewProfile from "./components/NewProfilePage";
 import RideInfoNewProfile from "./components/RideInfoNewProfile";
-import { AnonRoute } from "./components/routes/AnonRoute";
-import { AuthRoute } from "./components/routes/AuthRoute";
-import { LoggedInRoute } from "./components/LoggedInRoute";
 import Login from "./components/Login";
+import { createContext, useEffect, useState } from "react";
+
+export const UserContext = createContext();
 
 function App() {
+  const [user, setUser] = useState("");
+  const [token, setToken] = useState("");
+  useEffect(() => {
+    const _token = localStorage.getItem("token");
+    if (_token) {
+      setToken(_token);
+    }
+  }, [setToken]);
+
+  const value = {
+    user,
+    setUser,
+    token,
+    setToken,
+  };
+
   return (
     <BrowserRouter>
-      <userContextProvider>
+      <UserContext.Provider value={{ user, setUser, token, setToken }}>
         <MenuBar />
         <section id="appMainSection">
           <Routes>
             <Route path="/" element={<HeroPage />} />
             <Route
               path="/login"
-              // element={<Login setToken={setToken} />}
-              element={
-                <AnonRoute>
-                  <Login />
-                </AnonRoute>
-              }
-            />
-            <Route
-              path="/profile"
-              element={
-                <AuthRoute>
-                  <profile />
-                </AuthRoute>
-              }
+              // element={<Login />}
+              element={!token ? <Login /> : <ProfilePage />}
             />
             {/* <Route path="/profile" element={<ProfilePage />} /> */}
             <Route path="/newProfile" element={<CreateNewProfile />} />
@@ -44,7 +48,7 @@ function App() {
             />
           </Routes>
         </section>
-      </userContextProvider>
+      </UserContext.Provider>
     </BrowserRouter>
   );
 }

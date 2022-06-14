@@ -8,14 +8,14 @@ export default function MenuBar({ token }) {
   return (
     <>
       <input
-        class="menu-icon"
+        className="menu-icon"
         type="checkbox"
         id="menu-icon"
         name="menu-icon"
       />
       <label htmlFor="menu-icon"></label>
-      <nav class="nav">
-        <ul class="pt-5">
+      <nav className="nav">
+        <ul className="pt-5">
           {/* {!token ? (
             <>
               <li>

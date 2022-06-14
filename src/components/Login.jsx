@@ -1,11 +1,11 @@
 import { Button, Form, Input } from "antd";
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../context/userContext";
+import { UserContext } from "../App";
 import "../styling/loginPage.css";
 
 export default function Login() {
-  const { user, setUser, token, setToken } = useContext(UserContext);
+  const { setUser, token, setToken } = useContext(UserContext);
   let navigate = useNavigate();
   const handleLogin = ({ email, password }) => {
     console.log(email, password);
@@ -23,7 +23,7 @@ export default function Login() {
           alert(data.error);
           return;
         }
-        console.log(data);
+        console.log(data.user);
         console.log(data.token);
         localStorage.setItem("token", data.token);
         setToken(data.token);

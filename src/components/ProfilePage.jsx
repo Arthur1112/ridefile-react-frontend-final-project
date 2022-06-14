@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "../styling/profilePage.css";
 import Login from "./Login";
 import LogoutButton from "./LogoutButton";
@@ -14,8 +14,11 @@ import { ReactComponent as YourSvg9 } from "../svg/carDashboardIconsSvg/ventilat
 import { ReactComponent as YourSvg10 } from "../svg/carDashboardIconsSvg/oil.svg";
 import { ReactComponent as YourSvg11 } from "../svg/carDashboardIconsSvg/fuel-filling.svg";
 import { ReactComponent as YourSvg12 } from "../svg/carDashboardIconsSvg/battery.svg";
+import { UserContext } from "../App";
 
-export default function ProfilePage({ token, user }) {
+export default function ProfilePage() {
+  const { user, setUser, token, setToken } = useContext(UserContext);
+
   // const [profile, setProfile] = useState();
   // useEffect(() => {
   //   fetch("http://localhost:7050/profile")
@@ -34,8 +37,6 @@ export default function ProfilePage({ token, user }) {
           </h3>
           <p id="notLogedIn">Please Login First</p>
         </div>
-      ) : !user ? (
-        <h2>Loading...</h2>
       ) : (
         <section id="profileMainContainer">
           <img id="rideImage" src={user.rideImage} />
