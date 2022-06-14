@@ -6,7 +6,10 @@ import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
 import CreateNewProfile from "./components/NewProfilePage";
 import RideInfoNewProfile from "./components/RideInfoNewProfile";
+import { AnonRoute } from "./components/routes/AnonRoute";
+import { AuthRoute } from "./components/routes/AuthRoute";
 import { LoggedInRoute } from "./components/LoggedInRoute";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -19,9 +22,21 @@ function App() {
             <Route
               path="/login"
               // element={<Login setToken={setToken} />}
-              element={<LoggedInRoute />}
+              element={
+                <AnonRoute>
+                  <Login />
+                </AnonRoute>
+              }
             />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route
+              path="/profile"
+              element={
+                <AuthRoute>
+                  <profile />
+                </AuthRoute>
+              }
+            />
+            {/* <Route path="/profile" element={<ProfilePage />} /> */}
             <Route path="/newProfile" element={<CreateNewProfile />} />
             <Route
               path="/newProfileRideInfo"
