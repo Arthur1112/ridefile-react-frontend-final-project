@@ -4,25 +4,14 @@ import HeroPage from "./components/HeroPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProfilePage from "./components/ProfilePage";
 import MenuBar from "./components/MenuBar";
-import { createContext, useEffect, useState } from "react";
-import Login from "./components/Login";
 import CreateNewProfile from "./components/NewProfilePage";
 import RideInfoNewProfile from "./components/RideInfoNewProfile";
-
-export const UserContext = createContext(null);
+import { LoggedInRoute } from "./components/LoggedInRoute";
 
 function App() {
-  const [user, setUser] = useState();
-  const [token, setToken] = useState("");
-  useEffect(() => {
-    const _token = localStorage.getItem("token");
-    if (_token) {
-      setToken(_token);
-    }
-  }, []);
   return (
     <BrowserRouter>
-      <UserContext.Provider value={{ user, setUser }}>
+      <userContextProvider>
         <MenuBar />
         <section id="appMainSection">
           <Routes>
@@ -30,17 +19,9 @@ function App() {
             <Route
               path="/login"
               // element={<Login setToken={setToken} />}
-              element={
-                <div>
-                  {!token ? (
-                    <Login setToken={setToken} />
-                  ) : (
-                    <ProfilePage token={token} />
-                  )}
-                </div>
-              }
+              element={<LoggedInRoute />}
             />
-            <Route path="/profile" element={<ProfilePage token={token} />} />
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/newProfile" element={<CreateNewProfile />} />
             <Route
               path="/newProfileRideInfo"
@@ -48,7 +29,7 @@ function App() {
             />
           </Routes>
         </section>
-      </UserContext.Provider>
+      </userContextProvider>
     </BrowserRouter>
   );
 }

@@ -15,16 +15,16 @@ import { ReactComponent as YourSvg10 } from "../svg/carDashboardIconsSvg/oil.svg
 import { ReactComponent as YourSvg11 } from "../svg/carDashboardIconsSvg/fuel-filling.svg";
 import { ReactComponent as YourSvg12 } from "../svg/carDashboardIconsSvg/battery.svg";
 
-export default function ProfilePage({ token, setUser, user }) {
-  const [profile, setProfile] = useState();
-  useEffect(() => {
-    fetch("http://localhost:7050/profile")
-      // fetch("https://ridefile-final-project-as.web.app/profile")
-      .then((response) => response.json())
-      .then((data) => setProfile(data))
-      .catch(console.error);
-  }, []);
-  console.log(profile);
+export default function ProfilePage({ token, user }) {
+  // const [profile, setProfile] = useState();
+  // useEffect(() => {
+  //   fetch("http://localhost:7050/profile")
+  //     // fetch("https://ridefile-final-project-as.web.app/profile")
+  //     .then((response) => response.json())
+  //     .then((data) => setProfile(data))
+  //     .catch(console.error);
+  // }, []);
+  console.log(user);
   return (
     <section id="mainFlexContainer">
       {!token ? (
@@ -34,21 +34,21 @@ export default function ProfilePage({ token, setUser, user }) {
           </h3>
           <p id="notLogedIn">Please Login First</p>
         </div>
-      ) : !profile ? (
+      ) : !user ? (
         <h2>Loading...</h2>
       ) : (
         <section id="profileMainContainer">
-          <img id="rideImage" src={setProfile.rideImage} />
+          <img id="rideImage" src={user.rideImage} />
           <div>
             <dl id="mainProfileInfo">
               <img id="profileImage" src={user.profileImage} />
               <dt id="rideMainInfo">
-                {setProfile.rideYear} {setUser.rideMake} {""}
-                {setProfile.rideModel}
+                {user.rideYear} {user.rideMake} {""}
+                {user.rideModel}
               </dt>
               <dt id="rideSubInfo">
-                Color : {profile[0].rideColor} | Owner : {profile[0].rideOwner}{" "}
-                | Vehicle Trim : {profile[0].rideTrim}
+                Color : {user.rideColor} | Owner : {user.rideOwner} | Vehicle
+                Trim : {user.rideTrim}
               </dt>
               <dt></dt>
             </dl>
@@ -58,64 +58,62 @@ export default function ProfilePage({ token, setUser, user }) {
             <dt className="tabIconContainer">
               <YourSvg className="dashboardSvg" />
               <p className="tabIconDescription">Transmission:</p>
-              <p className="tabIconDescription">{profile[0].transmission}</p>
+              <p className="tabIconDescription">{user.transmission}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg2 className="dashboardSvg" />
               <p className="tabIconDescription">Exhaust System:</p>
-              <p className="tabIconDescription">{profile[0].exhaustSystem}</p>
+              <p className="tabIconDescription">{user.exhaustSystem}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg3 className="dashboardSvg" />
               <p className="tabIconDescription">Tire Size:</p>
-              <p className="tabIconDescription">{profile[0].rideTireSize}</p>
+              <p className="tabIconDescription">{user.rideTireSize}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg4 className="dashboardSvg" />
               <p className="tabIconDescription">Rim Size:</p>
-              <p className="tabIconDescription">{profile[0].rideRimSize}</p>
+              <p className="tabIconDescription">{user.rideRimSize}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg5 className="dashboardSvg" />
               <p className="tabIconDescription">Rims Info:</p>
-              <p className="tabIconDescription">{profile[0].RimsInfo}</p>
+              <p className="tabIconDescription">{user.RimsInfo}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg6 className="dashboardSvg" />
               <p className="tabIconDescription">Sound System:</p>
-              <p className="tabIconDescription">{profile[0].soundSystem}</p>
+              <p className="tabIconDescription">{user.soundSystem}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg7 className="dashboardSvg" />
               <p className="tabIconDescription">Seats:</p>
-              <p className="tabIconDescription">{profile[0].rideSeats}</p>
+              <p className="tabIconDescription">{user.rideSeats}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg8 className="dashboardSvg" />
               <p className="tabIconDescription">Front Brake Pad:</p>
-              <p className="tabIconDescription">{profile[0].frontBrakePads}</p>
+              <p className="tabIconDescription">{user.frontBrakePads}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg9 className="dashboardSvg" />
               <p className="tabIconDescription">Rear Brake Pad:</p>
-              <p className="tabIconDescription">{profile[0].rearBrakePads}</p>
+              <p className="tabIconDescription">{user.rearBrakePads}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg10 className="dashboardSvg" />
               <p className="tabIconDescription">Engine Oil:</p>
-              <p className="tabIconDescription">{profile[0].engineOilType}</p>
+              <p className="tabIconDescription">{user.engineOilType}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg11 className="dashboardSvg" />
               <p className="tabIconDescription">Engine Capacity:</p>
-              <p className="tabIconDescription">
-                {profile[0].engineOilCapacity}
-              </p>
+              <p className="tabIconDescription">{user.engineOilCapacity}</p>
             </dt>
             <dt className="tabIconContainer">
               <YourSvg12 className="dashboardSvg" />
               <p className="tabIconDescription">Battery Size:</p>
-              <p className="tabIconDescription">{profile[0].batterySize}</p>
+              <p className="tabIconDescription">{user.batterySize}</p>
             </dt>
             <br />
             <LogoutButton />

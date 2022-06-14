@@ -1,12 +1,12 @@
 import { Button, Form, Input } from "antd";
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { UserContext } from "../App";
+import { UserContext } from "../context/userContext";
 import "../styling/loginPage.css";
 
-export default function Login({ token, setToken, setUser }) {
+export default function Login() {
+  const { user, setUser, token, setToken } = useContext(UserContext);
   let navigate = useNavigate();
-
   const handleLogin = ({ email, password }) => {
     console.log(email, password);
     fetch("http://localhost:7050/login", {
