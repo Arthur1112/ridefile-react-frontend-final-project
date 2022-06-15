@@ -8,6 +8,7 @@ import CreateNewProfile from "./components/NewProfilePage";
 import RideInfoNewProfile from "./components/RideInfoNewProfile";
 import Login from "./components/Login";
 import { createContext, useEffect, useState } from "react";
+import Footer from "./components/Footer";
 
 export const UserContext = createContext();
 
@@ -48,6 +49,7 @@ function App() {
             />
           </Routes>
         </section>
+        <Footer />
       </UserContext.Provider>
     </BrowserRouter>
   );
