@@ -15,6 +15,8 @@ export const UserContext = createContext();
 function App() {
   const [user, setUser] = useState("");
   const [token, setToken] = useState("");
+  const [checked, setChecked] = useState(true);
+
   useEffect(() => {
     const _token = localStorage.getItem("token");
     if (_token) {
@@ -31,7 +33,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <UserContext.Provider value={{ user, setUser, token, setToken }}>
+      <UserContext.Provider
+        value={{ user, setUser, token, setToken, checked, setChecked }}
+      >
         <MenuBar />
         <section id="appMainSection">
           <Routes>
