@@ -11,7 +11,7 @@
 }
 
 #loginContainer {
-  width: 35%;
+  width: 25%;
   margin: 90px auto auto auto;
 }
 
@@ -85,5 +85,12 @@
   55% {
     text-shadow: none;
     box-shadow: none;
+  }
+}
+
+@media (max-width: 1400px) {
+  #loginContainer {
+    width: 75%;
+    margin: 90px auto auto auto;
   }
 }
