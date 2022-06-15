@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
 import "../styling/menuBar.css";
-import LogoutButton from "./LogoutButton";
 
 export default function MenuBar() {
   let navigate = useNavigate();
@@ -41,19 +40,41 @@ export default function MenuBar() {
             <a
               onClick={() => {
                 setChecked((old) => !old);
+                navigate("/profile");
               }}
             >
-              {checked ? "uncheck" : "check"}Profile
+              Profile
             </a>
           </li>
           <li>
-            <a onClick={() => navigate("/Login")}>Logout</a>
+            <a
+              onClick={() => {
+                setChecked((old) => !old);
+                navigate("/profile");
+              }}
+            >
+              Logout
+            </a>
           </li>
           <li>
-            <a onClick={() => navigate("/login")}>Login</a>
+            <a
+              onClick={() => {
+                setChecked((old) => !old);
+                navigate("/login");
+              }}
+            >
+              Login
+            </a>
           </li>
           <li>
-            <a onClick={() => navigate("/")}>Home</a>
+            <a
+              onClick={() => {
+                setChecked((old) => !old);
+                navigate("/");
+              }}
+            >
+              Home
+            </a>
           </li>
         </ul>
       </nav>

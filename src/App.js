@@ -15,7 +15,7 @@ export const UserContext = createContext();
 function App() {
   const [user, setUser] = useState("");
   const [token, setToken] = useState("");
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
     const _token = localStorage.getItem("token");
