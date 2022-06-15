@@ -43,7 +43,7 @@ export default function CreateNewProfile() {
       },
       body: JSON.stringify(newProfile),
     })
-      .then(() => navigate("/"))
+      .then(() => navigate("/login"))
       .catch(setError);
   };
 

@@ -32,7 +32,7 @@ export default function HeroPage() {
           <div className="face face1">
             <div>
               <YourSvgtitleCardTwoSvg className="titleSvg" />
-              <h3>About Ridefile</h3>
+              <h3>How to use RideFile</h3>
             </div>
           </div>
           <div className="face face2">
@@ -51,7 +51,7 @@ export default function HeroPage() {
           <div className="face face1">
             <div>
               <YourSvgtitleCardThreeSvg className="titleSvg" />
-              <h3>About Ridefile</h3>
+              <h3>Future of RideFile</h3>
             </div>
           </div>
           <div className="face face2">
