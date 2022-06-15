@@ -72,3 +72,9 @@ input {
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
 }
+
+@media (max-width: 1400px) {
+  #newUserForm {
+    width: 100%;
+  }
+}

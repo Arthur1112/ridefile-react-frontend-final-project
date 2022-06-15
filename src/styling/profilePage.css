@@ -228,7 +228,7 @@
 @media (max-width: 1400px) {
   #mainProfileInfo {
     bottom: 10%;
-    margin: 0px 0px 40px 0px;
+    margin: 0px 0px 60px 0px;
   }
   .tabIconContainer {
     display: grid;
@@ -258,5 +258,17 @@
     justify-content: center;
     align-items: center;
     /* border-style: solid; */
+  }
+  #profileMainContainer {
+    width: 75%;
+  }
+  #extraProfileInfo h2 {
+    width: 100%;
+    font-size: 23px;
+  }
+  #rideSubInfo {
+    font-size: 72%;
+    padding-top: 5px;
+    color: white;
   }
 }
