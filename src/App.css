@@ -1,9 +1,5 @@
 body {
   background-attachment: fixed;
-  background: linear-gradient(
-    to bottom,
-    rgba(232, 232, 232, 1) 0%,
-    rgba(251, 24, 24, 1) 86%
-  );
+  background: linear-gradient(to bottom, #e8e8e8 0%, #fb1818 86%);
   min-height: 950px;
 }
