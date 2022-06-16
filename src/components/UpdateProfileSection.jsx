@@ -6,49 +6,48 @@ import { UserContext } from "../App";
 
 export default function UpdateProfileSection() {
   const { user, setUser } = useContext(UserContext);
-  let navigate = useNavigate();
-  const [newProfile, setNewProfile] = useState({
-    username: "",
-    email: "",
-    password: "",
-    rideOwner: "",
-    rideMake: "",
-    rideModel: "",
-    rideTrim: "",
-    rideYear: "",
-    transmission: "",
-    rideColor: "",
-    rideTireSize: "",
-    rideRimSize: "",
-    RimsInfo: "",
-    frontBrakePads: "",
-    rearBrakePads: "",
-    engineOilType: "",
-    engineOilCapacity: "",
-    exhaustSystem: "",
-    batterySize: "",
-    rideSeats: "",
-    soundSystem: "",
-  });
+  // const [newProfile, setNewProfile] = useState({
+  //   rideOwner: "",
+  //   rideMake: "",
+  //   rideModel: "",
+  //   rideTrim: "",
+  //   rideYear: "",
+  //   transmission: "",
+  //   rideColor: "",
+  //   rideTireSize: "",
+  //   rideRimSize: "",
+  //   RimsInfo: "",
+  //   frontBrakePads: "",
+  //   rearBrakePads: "",
+  //   engineOilType: "",
+  //   engineOilCapacity: "",
+  //   exhaustSystem: "",
+  //   batterySize: "",
+  //   rideSeats: "",
+  //   soundSystem: "",
+  // });
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
-    fetch("https://ridefile-final-project-as.web.app/addNewProfile", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(newProfile),
-    })
-      .then(() => navigate("/login"))
-      .catch(setError);
+  const handleUpdate = (e) => {
+    fetch(
+      `https://ridefile-final-project-as.web.app/updateProfile/${user.id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
+    // .then(() => navigate("/login"))
+    // .catch(setError);
   };
 
   const handleChange = (e) => {
     const newValue = e.target.value;
-    setNewProfile({
-      ...newProfile,
+    setUser({
+      ...user,
       [e.target.name]: newValue,
     });
   };
@@ -79,14 +78,14 @@ export default function UpdateProfileSection() {
       <section id="newUserMainInfoContainer">
         <div id="newUserForm">
           <h3>Please update your rides information below! </h3>
-          <Form onFinish={handleSubmit}>
+          <Form onFinish={handleUpdate}>
             <div className="rideFormDiv">
               <Form.Item for="rideMake">
                 Make:
                 <Input
                   name="rideMake"
                   type="text"
-                  value={newProfile.rideMake}
+                  value={user.rideMake}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -95,7 +94,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rideModel"
                   type="text"
-                  value={newProfile.rideModel}
+                  value={user.rideModel}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -107,7 +106,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rideTrim"
                   type="text"
-                  value={newProfile.rideTrim}
+                  value={user.rideTrim}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -116,7 +115,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rideYear"
                   type="text"
-                  value={newProfile.rideYear}
+                  value={user.rideYear}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -128,7 +127,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="transmission"
                   type="text"
-                  value={newProfile.transmission}
+                  value={user.transmission}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -137,7 +136,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rideColor"
                   type="text"
-                  value={newProfile.rideColor}
+                  value={user.rideColor}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -149,7 +148,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rideTireSize"
                   type="text"
-                  value={newProfile.rideTireSize}
+                  value={user.rideTireSize}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -158,7 +157,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rideRimSize"
                   type="text"
-                  value={newProfile.rideRimSize}
+                  value={user.rideRimSize}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -170,7 +169,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="RimsInfo"
                   type="text"
-                  value={newProfile.RimsInfo}
+                  value={user.RimsInfo}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -179,7 +178,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="frontBrakePads"
                   type="text"
-                  value={newProfile.frontBrakePads}
+                  value={user.frontBrakePads}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -191,7 +190,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rearBrakePads"
                   type="text"
-                  value={newProfile.rearBrakePads}
+                  value={user.rearBrakePads}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -201,7 +200,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="engineOilType"
                   type="text"
-                  value={newProfile.engineOilType}
+                  value={user.engineOilType}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -213,7 +212,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="engineOilCapacity"
                   type="text"
-                  value={newProfile.engineOilCapacity}
+                  value={user.engineOilCapacity}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -223,7 +222,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="exhaustSystem"
                   type="text"
-                  value={newProfile.exhaustSystem}
+                  value={user.exhaustSystem}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -235,7 +234,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="batterySize"
                   type="text"
-                  value={newProfile.batterySize}
+                  value={user.batterySize}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -245,7 +244,7 @@ export default function UpdateProfileSection() {
                 <Input
                   name="rideSeats"
                   type="text"
-                  value={newProfile.rideSeats}
+                  value={user.rideSeats}
                   onChange={handleChange}
                 />
               </Form.Item>
@@ -257,13 +256,13 @@ export default function UpdateProfileSection() {
                 <Input
                   name="soundSystem"
                   type="text"
-                  value={newProfile.soundSystem}
+                  value={user.soundSystem}
                   onChange={handleChange}
                 />
               </Form.Item>
             </div>
 
-            <div className="rideFormImgDiv">
+            {/* <div className="rideFormImgDiv">
               <Form.Item for="profileImage">
                 Profile Image URL:
                 <Upload
@@ -271,7 +270,7 @@ export default function UpdateProfileSection() {
                   {...props}
                   name="profileImage"
                   type="text"
-                  value={newProfile.profileImage}
+                  value={user.profileImage}
                   onChange={handleChange}
                 >
                   <Button icon={<UploadOutlined />}>Click to Upload</Button>
@@ -286,16 +285,16 @@ export default function UpdateProfileSection() {
                   {...props}
                   name="rideImage"
                   type="text"
-                  value={newProfile.rideImage}
+                  value={user.rideImage}
                   onChange={handleChange}
                 >
                   <Button icon={<UploadOutlined />}>Click to Upload</Button>
                 </Upload>
               </Form.Item>
               <br />
-            </div>
+            </div> */}
             <br />
-            <Button onClick={handleSubmit} id="loginButton" htmlType="submit">
+            <Button onClick={handleUpdate} id="loginButton" htmlType="submit">
               Update
             </Button>
           </Form>

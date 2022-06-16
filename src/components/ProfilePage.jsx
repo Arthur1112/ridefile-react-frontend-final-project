@@ -22,7 +22,6 @@ import UpdateProfileButton from "./UpdateProfileButton";
 export default function ProfilePage() {
   const { user, setUser, token, setToken } = useContext(UserContext);
   let navigate = useNavigate();
-  console.log(user);
   return (
     <section id="mainFlexContainer">
       {!token ? (

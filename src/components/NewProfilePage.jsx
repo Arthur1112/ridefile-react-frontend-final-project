@@ -48,18 +48,6 @@ export default function CreateNewProfile() {
       .then(() => navigate("/login"))
       .catch(setError);
   };
-  // const handleUpload = (e) => {
-  //   fetch("https://ridefile-final-project-as.web.app/addNewProfile", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       Accept: "application/json",
-  //     },
-  //     body: JSON.stringify(newProfile),
-  //   })
-  //     .then(() => navigate("/login"))
-  //     .catch(setError);
-  // };
 
   const handleChange = (e) => {
     const newValue = e.target.value;
@@ -330,7 +318,7 @@ export default function CreateNewProfile() {
               </Form.Item>
             </div>
 
-            <div className="rideFormImgDiv">
+            <div className="rideFormDiv">
               <Form.Item for="profileImage">
                 Profile Image URL:
                 <Upload
