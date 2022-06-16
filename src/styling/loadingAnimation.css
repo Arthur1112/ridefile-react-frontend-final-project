@@ -1,0 +1,19 @@
+.spinnerDiv {
+  width: 25%;
+  margin: 30px auto auto auto;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  animation: spinningWheel 0.5s infinite;
+}
+
+@keyframes spinningWheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

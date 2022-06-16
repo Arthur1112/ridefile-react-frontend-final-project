@@ -1,13 +1,18 @@
 import { Button, Form, Input } from "antd";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
 import "../styling/loginPage.css";
+import Loader from "./Loader";
+import ProfilePage from "./ProfilePage";
 
 export default function Login() {
-  const { setUser, token, setToken } = useContext(UserContext);
+  const { user, setUser, token, setToken } = useContext(UserContext);
+  const [loggedInState, setLoggedInState] = useState();
   let navigate = useNavigate();
-  const handleLogin = ({ email, password }) => {
+  const handleLogin = ({ email, password }, e) => {
+    // e.preventDefault();
+    // setLoggedInState("logging in");
     console.log(email, password);
     // fetch("http://localhost:7050/login", {
     fetch("https://ridefile-final-project-as.web.app/login", {
@@ -63,6 +68,7 @@ export default function Login() {
             <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
               <Button id="loginButton" htmlType="submit">
                 Login
+                {/* {loggedInState === "logged in" ? <Loader /> : ""} */}
               </Button>
               <br />
               <p>New to Ridefile?</p>
@@ -77,8 +83,10 @@ export default function Login() {
             </Form.Item>
           </Form>
         </section>
+      ) : !user ? (
+        <Loader />
       ) : (
-        <>You'll be redirected soon</>
+        navigate("/profile")
       )}
     </section>
   );

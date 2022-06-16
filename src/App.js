@@ -43,10 +43,10 @@ function App() {
             <Route path="/" element={<HeroPage />} />
             <Route
               path="/login"
-              // element={<Login />}
-              element={!token ? <Login /> : <ProfilePage />}
+              element={<Login />}
+              // element={!token ? <Login /> : <ProfilePage />}
             />
-            {/* <Route path="/profile" element={<ProfilePage />} /> */}
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/newProfile" element={<CreateNewProfile />} />
             <Route
               path="/newProfileRideInfo"

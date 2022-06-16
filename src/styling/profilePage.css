@@ -40,7 +40,6 @@
 }
 #rideImage {
   bottom: 100%;
-  border-style: solid;
   left: 25px;
   z-index: 0;
   border-radius: 4%;
@@ -51,7 +50,6 @@
 }
 
 #rideImageContainer {
-  border-style: solid;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -274,13 +272,14 @@
   .tabIconDescription {
     padding: 0px;
     display: flex;
+    font-size: 23px;
     color: white;
     justify-content: center;
     align-items: center;
     /* border-style: solid; */
   }
   #profileMainContainer {
-    width: 75%;
+    width: 45%;
   }
   #extraProfileInfo h2 {
     width: 100%;
