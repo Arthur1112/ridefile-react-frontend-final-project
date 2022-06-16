@@ -118,7 +118,10 @@ export default function ProfilePage() {
               <p className="tabIconDescription">{user.batterySize}</p>
             </dt>
             <br />
-            <LogoutButton />
+            <div id="profileButtons">
+              <LogoutButton />
+              <UpdateProfileButton />
+            </div>
           </dl>
         </section>
       )}

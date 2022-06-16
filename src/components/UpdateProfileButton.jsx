@@ -1,14 +1,4 @@
-import { Button, Form, Input, Upload, message } from "antd";
-import { UploadOutlined } from "@ant-design/icons";
-
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../styling/newProfilePage.css";
-
-// import { salt } from "../mySalt";
-// import bcrypt from "bcryptjs";
-
-export default function CreateNewProfile() {
+export default function UpdateProfileButton() {
   let navigate = useNavigate();
   // const hash = bcrypt.hashSync(password, salt);
   const [newProfile, setNewProfile] = useState({
