@@ -17,6 +17,7 @@ import { ReactComponent as YourSvg12 } from "../svg/carDashboardIconsSvg/battery
 import { UserContext } from "../App";
 import { Button } from "antd";
 import { useNavigate } from "react-router-dom";
+import UpdateProfileButton from "./UpdateProfileButton";
 
 export default function ProfilePage() {
   const { user, setUser, token, setToken } = useContext(UserContext);

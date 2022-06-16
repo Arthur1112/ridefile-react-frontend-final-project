@@ -9,6 +9,7 @@ import RideInfoNewProfile from "./components/RideInfoNewProfile";
 import Login from "./components/Login";
 import { createContext, useEffect, useState } from "react";
 import Footer from "./components/Footer";
+import UpdateProfileSection from "./components/UpdateProfileSection.jsx";
 
 export const UserContext = createContext();
 
@@ -51,6 +52,7 @@ function App() {
               path="/newProfileRideInfo"
               element={<RideInfoNewProfile />}
             />
+            <Route path="/updateProfile" element={<UpdateProfileSection />} />
           </Routes>
         </section>
         <Footer />
