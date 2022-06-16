@@ -8,11 +8,11 @@ import ProfilePage from "./ProfilePage";
 
 export default function Login() {
   const { user, setUser, token, setToken } = useContext(UserContext);
-  const [loggedInState, setLoggedInState] = useState();
+  const [loggedInState, setLoggedInState] = useState(false);
   let navigate = useNavigate();
-  const handleLogin = ({ email, password }, e) => {
+  const handleLogin = ({ email, password }) => {
     // e.preventDefault();
-    // setLoggedInState("logging in");
+    setLoggedInState(true);
     console.log(email, password);
     // fetch("http://localhost:7050/login", {
     fetch("https://ridefile-final-project-as.web.app/login", {
@@ -68,8 +68,8 @@ export default function Login() {
             <Form.Item wrapperCol={{ span: 16, offset: 8 }}>
               <Button id="loginButton" htmlType="submit">
                 Login
-                {/* {loggedInState === "logged in" ? <Loader /> : ""} */}
               </Button>
+              {loggedInState && <Loader />}
               <br />
               <p>New to Ridefile?</p>
               <Button
@@ -83,8 +83,6 @@ export default function Login() {
             </Form.Item>
           </Form>
         </section>
-      ) : !user ? (
-        <Loader />
       ) : (
         navigate("/profile")
       )}

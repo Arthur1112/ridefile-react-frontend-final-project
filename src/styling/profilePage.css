@@ -3,6 +3,7 @@
   padding: 10px;
   font-size: 3em;
   margin: auto;
+  border-style: solid;
   display: grid;
   justify-items: center;
   align-items: center;
@@ -16,7 +17,14 @@
   justify-items: center;
 }
 
+/* #mainFlexContainer {
+  border-style: solid;
+  border-width: 10px;
+  border-color: rgb(0, 136, 255);
+} */
+
 #profileMainContainer {
+  border-color: aliceblue;
   margin: auto;
   padding: 5px;
   display: flex;
@@ -43,7 +51,7 @@
   left: 25px;
   z-index: 0;
   border-radius: 4%;
-  max-width: 50%;
+  max-width: 55%;
   box-shadow: 0 0 1.2rem rgb(255, 255, 255), 0 0 0.2rem rgb(255, 0, 0),
     0 0 3rem #ff5e00, 0 0 0.8rem #fe1313, 0 0 2.8rem #ff0000,
     inset 0 0 1.3rem #fe1313;
@@ -238,8 +246,18 @@
     font-size: 120%;
   }
   #profileImageContainer2 {
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
+  }
+  #rideImage {
+    bottom: 100%;
+    left: 25px;
+    z-index: 0;
+    border-radius: 4%;
+    max-width: 65%;
+    box-shadow: 0 0 1.2rem rgb(255, 255, 255), 0 0 0.2rem rgb(255, 0, 0),
+      0 0 3rem #ff5e00, 0 0 0.8rem #fe1313, 0 0 2.8rem #ff0000,
+      inset 0 0 1.3rem #fe1313;
   }
 }
 
@@ -279,7 +297,7 @@
     /* border-style: solid; */
   }
   #profileMainContainer {
-    width: 45%;
+    width: 55%;
   }
   #extraProfileInfo h2 {
     width: 100%;
