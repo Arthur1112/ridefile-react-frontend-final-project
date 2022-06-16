@@ -6,16 +6,26 @@
   flex-wrap: wrap;
 }
 
+.svgAndTitleConatainer {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+
 #cardOne .titleSvg {
   stroke: rgb(237, 122, 0);
   stroke-width: 3px;
+  width: 35%;
   animation-name: animateCardOne;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
 #cardTwo .titleSvg {
-  stroke: rgb(237, 0, 237);
+  stroke: rgb(0, 255, 251);
+  width: 35%;
   animation-name: animateCardTwo;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -23,6 +33,8 @@
   stroke-width: 3px;
 }
 #cardThree .titleSvg {
+  width: 35%;
+
   stroke: rgb(21, 255, 0);
   animation-name: animateCardThree;
   animation-duration: 1s;
@@ -38,6 +50,7 @@
 
 .container .card .face {
   width: 450px;
+
   height: 200px;
   transition: 0.4s;
   animation: flicker 10000s infinite alternate;
@@ -50,6 +63,7 @@
 }
 
 .container .card .face.face1 {
+  border-color: rgb(227, 15, 15);
   position: relative;
   background: rgba(0, 0, 0, 0.219);
   backdrop-filter: blur(100px);
@@ -107,6 +121,7 @@
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
+
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
   transform: translateY(-100px);
 }
@@ -159,8 +174,8 @@ a {
   }
 
   100% {
-    filter: drop-shadow(0px 0px 3px rgb(237, 0, 237))
-      drop-shadow(0px 0px 6px rgb(237, 0, 237));
+    filter: drop-shadow(0px 0px 3px rgb(0, 255, 251))
+      drop-shadow(0px 0px 6px rgb(0, 255, 251));
   }
 }
 @keyframes animateCardThree {
