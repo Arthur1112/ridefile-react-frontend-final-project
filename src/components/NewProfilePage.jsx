@@ -1,4 +1,6 @@
-import { Button, Form, Input } from "antd";
+import { Button, Form, Input, Upload, message } from "antd";
+import { UploadOutlined } from "@ant-design/icons";
+
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styling/newProfilePage.css";
@@ -53,6 +55,26 @@ export default function CreateNewProfile() {
       ...newProfile,
       [e.target.name]: newValue,
     });
+  };
+  const props = {
+    onChange(info) {
+      if (info.file.status !== "uploading") {
+        console.log(info.file, info.fileList);
+      }
+      if (info.file.status === "done") {
+        message.success(`${info.file.name} file uploaded successfully`);
+      } else if (info.file.status === "error") {
+        message.error(`${info.file.name} file upload failed.`);
+      }
+    },
+    progress: {
+      strokeColor: {
+        "0%": "#108ee9",
+        "100%": "#87d068",
+      },
+      strokeWidth: 3,
+      format: (percent) => percent && `${parseFloat(percent.toFixed(2))}%`,
+    },
   };
 
   return (
@@ -294,27 +316,36 @@ export default function CreateNewProfile() {
                   onChange={handleChange}
                 />
               </Form.Item>
+            </div>
+
+            <div className="rideFormImgDiv">
               <Form.Item for="profileImage">
                 Profile Image URL:
-                <Input
+                <Upload
+                  classiName="imgUpload"
+                  {...props}
                   name="profileImage"
                   type="text"
                   value={newProfile.profileImage}
                   onChange={handleChange}
-                />
+                >
+                  <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                </Upload>
               </Form.Item>
               <br />
-            </div>
-            <br />
-            <div className="rideFormDiv">
+              <br />
               <Form.Item for="rideImage">
                 Ride Image Url:
-                <Input
+                <Upload
+                  className="imgUpload"
+                  {...props}
                   name="rideImage"
                   type="text"
                   value={newProfile.rideImage}
                   onChange={handleChange}
-                />
+                >
+                  <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                </Upload>
               </Form.Item>
               <br />
             </div>

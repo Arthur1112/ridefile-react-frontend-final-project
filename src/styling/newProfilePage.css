@@ -1,17 +1,20 @@
 #newUserMainInfoContainer {
   display: flex;
-  /* border-style: solid; */
   justify-content: center;
   padding: 100px;
 }
 
+#imgUpload {
+  border-style: solid;
+}
+
 #newUserForm {
-  width: 22%;
   border-style: solid;
   font-family: Assistant, sans-serif;
   display: grid;
   border-radius: 8px;
   padding: 50px;
+  width: 27%;
   background: linear-gradient(
     90deg,
     rgba(36, 0, 0, 1) 0%,
@@ -47,6 +50,12 @@ input {
 
 .rideFormDiv {
   display: flex;
+  margin-top: 10px;
+}
+.rideFormImgDiv {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
 }
 
 #newUserRideForm {
@@ -73,7 +82,37 @@ input {
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1400px) {
+  #newUserForm {
+    width: 30%;
+  }
+}
+@media (max-width: 1300px) {
+  #newUserForm {
+    width: 40%;
+  }
+}
+@media (max-width: 1200px) {
+  #newUserForm {
+    width: 30%;
+  }
+}
+@media (max-width: 1100px) {
+  #newUserForm {
+    width: 40%;
+  }
+}
+@media (max-width: 1000px) {
+  #newUserForm {
+    width: 40%;
+  }
+}
+@media (max-width: 900px) {
+  #newUserForm {
+    width: 50%;
+  }
+}
+@media (max-width: 800px) {
   #newUserForm {
     width: 100%;
   }
