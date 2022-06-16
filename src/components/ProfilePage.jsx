@@ -34,10 +34,16 @@ export default function ProfilePage() {
         </div>
       ) : (
         <section id="profileMainContainer">
-          <img id="rideImage" src={user.rideImage} />
+          <div id="rideImageContainer">
+            <img id="rideImage" src={user.rideImage} />
+          </div>
           <div>
             <dl id="mainProfileInfo">
-              <img id="profileImage" src={user.profileImage} />
+              <div id="profileImageContainer">
+                <div id="profileImageContainer2">
+                  <img id="profileImage" src={user.profileImage} />
+                </div>
+              </div>
               <dt id="rideMainInfo">
                 {user.rideYear} {user.rideMake} {""}
                 {user.rideModel}

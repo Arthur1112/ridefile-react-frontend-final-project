@@ -40,28 +40,48 @@
 }
 #rideImage {
   bottom: 100%;
+  border-style: solid;
   left: 25px;
   z-index: 0;
   border-radius: 4%;
-  max-width: 80%;
+  max-width: 50%;
   box-shadow: 0 0 1.2rem rgb(255, 255, 255), 0 0 0.2rem rgb(255, 0, 0),
     0 0 3rem #ff5e00, 0 0 0.8rem #fe1313, 0 0 2.8rem #ff0000,
     inset 0 0 1.3rem #fe1313;
 }
-#profileImage {
-  width: 190px;
-  height: 180px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-  /* border-radius: 60%; */
-  /* position: relative; */
+
+#rideImageContainer {
+  border-style: solid;
+  width: 100%;
   display: flex;
-  /* bottom: 100px; */
+  justify-content: center;
+}
+
+#profileImageContainer {
+  display: flex;
+  justify-content: center;
+}
+#profileImageContainer2 {
+  align-items: baseline;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  animation: flicker 1.5s infinite alternate;
+  box-shadow: 0 0 0rem rgba(255, 255, 255, 0.305);
+  --neon-border-color: rgba(255, 0, 0, 0.236);
+}
+
+#profileImage {
+  width: 100%;
+  display: flex;
   margin: auto;
-  /* min-width: 50px;
-  max-width: 27%;
-  min-height: 160px; */
   border: 0.1rem solid #fff;
   animation: flicker 1.5s infinite alternate;
   box-shadow: 0 0 0rem rgba(255, 255, 255, 0.305);
@@ -219,9 +239,9 @@
     padding: 5px;
     font-size: 120%;
   }
-  #profileImage {
+  #profileImageContainer2 {
     width: 100px;
-    height: 90px;
+    height: 100px;
   }
 }
 
@@ -264,10 +284,10 @@
   }
   #extraProfileInfo h2 {
     width: 100%;
-    font-size: 23px;
+    font-size: 22px;
   }
   #rideSubInfo {
-    font-size: 72%;
+    font-size: 65%;
     padding-top: 5px;
     color: white;
   }
