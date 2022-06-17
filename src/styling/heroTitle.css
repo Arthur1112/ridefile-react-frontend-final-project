@@ -1,45 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@100;500;700&display=swap");
 
-/* *,
-*:after,
-*:before {
-  box-sizing: border-box;
-} */
-
-h1 {
-  font-family: "DM Serif Display", serif;
-  padding: 2%;
-  --neon-border-color: rgb(255, 0, 0);
-  margin-top: 120px;
-  margin-bottom: 235px;
-  /* border-color: rgb(187, 187, 187); */
-  backdrop-filter: blur(20px);
-  /* backdrop-filter: invert(0.7); */
-  color: rgb(255, 255, 255);
-  font-size: 14vw;
-  font-weight: 900;
-  border: 0.2rem solid #fff;
-  text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
+:root {
+  --Text-color: rgb(255, 255, 255);
+  --Custom-text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
     0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
     0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
     0.035em 0.035em 0 rgba(0, 0, 0, 12%);
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
+  --Red-box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
 }
 
-h1::-moz-selection {
-  background-color: var(--neon-border-color);
-  color: var(--neon-text-color);
-}
-
-h1::selection {
-  background-color: var(--neon-border-color);
-  color: var(--neon-text-color);
-}
-
-h1:focus {
-  outline: none;
+h1 {
+  font-family: "DM Serif Display", serif;
+  padding: 2%;
+  margin-top: 120px;
+  margin-bottom: 235px;
+  color: var(--Text-color);
+  font-size: 14vw;
+  font-weight: 900;
+  border: 0.2rem solid #fff;
+  text-shadow: var(--Custom-text-shadow);
+  box-shadow: var(--Red-box-shadow);
 }
 
 @keyframes flicker {
@@ -71,12 +53,6 @@ h1:focus {
 
 #titleDiv {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  justify-items: center;
   justify-content: center;
-  margin: 80px;
-  margin-top: 30px;
+  margin: 30px 80px 80px 80px;
 }
