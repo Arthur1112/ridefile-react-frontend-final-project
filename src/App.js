@@ -12,12 +12,13 @@ import Footer from "./components/Footer";
 import UpdateProfileSection from "./components/UpdateProfileSection.jsx";
 
 export const UserContext = createContext();
+const defaultDark = window.matchMedia("(prefers-color-scheme: 80s)").matches;
 
 function App() {
   const [user, setUser] = useState("");
   const [token, setToken] = useState("");
   const [checked, setChecked] = useState(false);
-  const [theme, setTheme] = useState("theme" ? "light" : "80s");
+  const [theme, setTheme] = useState("theme", defaultDark ? "80s" : "light");
 
   useEffect(() => {
     const _token = localStorage.getItem("token");
