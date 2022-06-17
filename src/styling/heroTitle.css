@@ -8,6 +8,7 @@ h1 {
   color: var(--Text-color);
   font-size: 14vw;
   font-weight: 900;
+  background: var(--darkRed-background-color-boxes);
   border: 0.2rem solid #fff;
   text-shadow: var(--Custom-text-shadow);
   box-shadow: var(--Red-box-shadow);
