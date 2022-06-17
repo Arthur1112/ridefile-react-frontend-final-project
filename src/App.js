@@ -9,17 +9,22 @@ import RideInfoNewProfile from "./components/RideInfoNewProfile";
 import Login from "./components/Login";
 import { createContext, useEffect, useState } from "react";
 import Footer from "./components/Footer";
+import useLocalStorage from "use-local-storage";
+
 import UpdateProfileSection from "./components/UpdateProfileSection.jsx";
 
 export const UserContext = createContext();
-const defaultDark = window.matchMedia("(prefers-color-scheme: 80s)").matches;
 
 function App() {
+  const defaultDark = window.matchMedia("(prefers-color-scheme: 80s)").matches;
   const [user, setUser] = useState("");
   const [token, setToken] = useState("");
   const [checked, setChecked] = useState(false);
   const [theme, setTheme] = useState("theme", defaultDark ? "80s" : "light");
-
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "80s" : "light";
+    setTheme(newTheme);
+  };
   useEffect(() => {
     const _token = localStorage.getItem("token");
     if (_token) {
@@ -37,10 +42,22 @@ function App() {
   return (
     <BrowserRouter>
       <UserContext.Provider
-        value={{ user, setUser, token, setToken, checked, setChecked }}
+        value={{
+          user,
+          setUser,
+          token,
+          setToken,
+          checked,
+          setChecked,
+          theme,
+          setTheme,
+        }}
       >
-        <MenuBar />
-        <section id="appMainSection">
+        <section data-theme={theme} id="appMainSection">
+          <button onClick={switchTheme}>
+            Switch the Theme to {theme === "light" ? "80s" : "light"}
+          </button>
+          <MenuBar />
           <Routes>
             <Route path="/" element={<HeroPage />} />
             <Route
