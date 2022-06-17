@@ -7,19 +7,17 @@
   align-items: center;
   align-content: center;
   animation: spinningWheel 0.5s infinite;
-  stroke: #fff;
+  stroke: var(--Text-color);
   stroke-width: 8px;
 }
 
 @keyframes spinningWheel {
   0% {
     transform: rotate(0deg);
-    filter: drop-shadow(0px 0px 1px rgb(255, 255, 255))
-      drop-shadow(0px 0px 3px rgb(255, 255, 255))
-      drop-shadow(0px 0px 10px #ffffff);
+    filter: var(--zero-svg-filter-neon);
   }
   100% {
     transform: rotate(360deg);
-    filter: drop-shadow(0px 0px 3px #fff) drop-shadow(0px 0px 6px #fff);
+    filter: var(--hundred-svg-filter-neon);
   }
 }
