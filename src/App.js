@@ -17,6 +17,7 @@ function App() {
   const [user, setUser] = useState("");
   const [token, setToken] = useState("");
   const [checked, setChecked] = useState(false);
+  const [theme, setTheme] = useState("theme" ? "light" : "80s");
 
   useEffect(() => {
     const _token = localStorage.getItem("token");
