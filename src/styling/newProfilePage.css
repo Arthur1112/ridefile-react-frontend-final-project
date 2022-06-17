@@ -15,25 +15,19 @@
   border-radius: 8px;
   padding: 50px;
   width: 27%;
-  background: linear-gradient(
-    90deg,
-    rgba(36, 0, 0, 1) 0%,
-    rgba(255, 53, 53, 1) 100%
-  );
+  background: var(--darkRed-background-color-boxes);
   color: #fff;
   justify-content: center;
   border-style: solid;
   border-color: black;
   animation: flicker 1.5s infinite alternate;
-  --neon-border-color: rgb(255, 0, 0);
-  border: 0.1rem solid #fff;
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
-    0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+  --neon-border-color: var(--neon-border-color-brightRed);
+  border: 0.1rem solid var(--Text-color);
+  box-shadow: var(--Red-box-shadow);
 }
 
 #newUserRideInformation {
   display: flex;
-  /* border-style: solid; */
   justify-content: center;
   margin: auto;
   padding: 100px;
@@ -44,8 +38,8 @@ input {
   margin-right: 20px;
   border: none;
   background: 0 0;
-  box-shadow: 1px 1px #fff;
-  color: white;
+  box-shadow: 1px 1px var(--Text-color);
+  color: var(--Text-color);
 }
 
 .rideFormDiv {
@@ -58,7 +52,7 @@ input {
   justify-content: space-between;
 }
 
-#newUserRideForm {
+/* #newUserRideForm {
   width: 42%;
   margin: 5px;
   border-style: solid;
@@ -80,7 +74,7 @@ input {
   border: 0.1rem solid #fff;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
-}
+} */
 
 @media (min-width: 1400px) {
   #newUserForm {
