@@ -10,8 +10,8 @@ import Login from "./components/Login";
 import { createContext, useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import useLocalStorage from "use-local-storage";
-
 import UpdateProfileSection from "./components/UpdateProfileSection.jsx";
+import { Switch } from "antd";
 
 export const UserContext = createContext();
 
@@ -54,9 +54,10 @@ function App() {
         }}
       >
         <section data-theme={theme} id="appMainSection">
-          <button onClick={switchTheme}>
-            Switch the Theme to {theme === "light" ? "80s" : "light"}
-          </button>
+          <div id="themeSwitchContainer">
+            <input type="checkbox" id="ThemeSwitch" onChange={switchTheme} />{" "}
+            <label id="themeLabel" for="ThemeSwitch"></label>
+          </div>
           <MenuBar />
           <Routes>
             <Route path="/" element={<HeroPage />} />

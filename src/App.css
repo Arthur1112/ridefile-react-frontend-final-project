@@ -67,11 +67,7 @@
   /* --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #0004ff 86%); */
   --Red-background-color: url("https://cutewallpaper.org/21/aesthetic-background-gif/6-wallpaper-Best-of-Pastel-Aesthetic-Background-Gif-indias-.gif");
   --Black-background-color: linear-gradient(90deg, #270245, #000000);
-  --darkRed-background-color-boxes: linear-gradient(
-    90deg,
-    rgb(0, 0, 0) 0%,
-    rgba(192, 77, 249) 100%
-  );
+  --darkRed-background-color-boxes: none;
   --title-svg-one-stroke: rgb(255, 0, 221);
   --title-svg-two-stroke: rgb(255, 0, 221);
   --title-svg-three-stroke: rgb(255, 0, 221);
@@ -90,6 +86,14 @@
 body {
   margin: 0;
 }
+
+/* body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+} */
 
 #appMainSection {
   background: var(--Red-background-color) no-repeat center fixed !important;
