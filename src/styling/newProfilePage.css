@@ -111,3 +111,11 @@ input {
     width: 100%;
   }
 }
+@media (max-width: 400px) {
+  #newUserForm {
+    width: 140%;
+  }
+  #newUserMainInfoContainer {
+    width: auto;
+  }
+}

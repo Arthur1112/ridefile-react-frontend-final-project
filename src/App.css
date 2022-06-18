@@ -87,18 +87,18 @@ body {
   margin: 0;
 }
 
-/* body,
+body,
 html {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden;
-} */
+}
 
 #appMainSection {
   background: var(--Red-background-color) no-repeat center fixed !important;
   background-size: cover !important;
   min-height: 60vw !important;
+  overflow: auto !important;
 }
 
 #footerContainer {

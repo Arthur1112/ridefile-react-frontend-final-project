@@ -9,6 +9,7 @@
 #loginContainer {
   width: 25%;
   margin: 90px auto auto auto;
+  min-height: 76.9vh;
 }
 
 #loginInput {
@@ -50,6 +51,25 @@
 }
 
 @media (max-width: 1400px) {
+  #loginContainer {
+    width: 25%;
+    margin: 90px auto auto auto;
+  }
+}
+
+@media (max-width: 900px) {
+  #loginContainer {
+    width: 35%;
+    margin: 90px auto auto auto;
+  }
+}
+@media (max-width: 800px) {
+  #loginContainer {
+    width: 55%;
+    margin: 90px auto auto auto;
+  }
+}
+@media (max-width: 400px) {
   #loginContainer {
     width: 75%;
     margin: 90px auto auto auto;
