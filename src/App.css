@@ -16,7 +16,7 @@
     0 0 0.2rem rgb(255, 0, 0), 0 0 3rem #ff5e00, 0 0 0.8rem #fe1313,
     0 0 2.8rem #ff0000, inset 0 0 1.3rem #fe1313;
   /* --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #fb1818 86%); */
-  --Red-background-color: linear-gradient(to bottom, #0f0d0d 100%, #ffffff 5%);
+  --Red-background-color: url("https://w.wallha.com/ws/11/56tXTAlV.jpg");
   --Black-background-color: linear-gradient(
     90deg,
     rgba(36, 0, 0, 1) 0%,
@@ -64,7 +64,8 @@
     0 0 0.2rem rgb(255, 0, 221), 0 0 3rem rgb(255, 0, 221),
     0 0 0.8rem rgb(255, 0, 221), 0 0 2.8rem rgb(255, 0, 221),
     inset 0 0 1.3rem rgb(255, 0, 221);
-  --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #0004ff 86%);
+  /* --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #0004ff 86%); */
+  --Red-background-color: url("https://cutewallpaper.org/21/aesthetic-background-gif/6-wallpaper-Best-of-Pastel-Aesthetic-Background-Gif-indias-.gif");
   --Black-background-color: linear-gradient(90deg, #270245, #000000);
   --darkRed-background-color-boxes: linear-gradient(
     90deg,
@@ -87,7 +88,15 @@
 }
 
 body {
-  background-attachment: fixed;
-  background: var(--Red-background-color);
-  min-height: 950px;
+  margin: 0;
+}
+
+#appMainSection {
+  background: var(--Red-background-color) no-repeat center fixed !important;
+  background-size: cover !important;
+  min-height: 60vw !important;
+}
+
+#footerContainer {
+  background: inherit;
 }

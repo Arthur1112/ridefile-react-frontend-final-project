@@ -73,8 +73,8 @@ function App() {
             />
             <Route path="/updateProfile" element={<UpdateProfileSection />} />
           </Routes>
+          <Footer />
         </section>
-        <Footer />
       </UserContext.Provider>
     </BrowserRouter>
   );
