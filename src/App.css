@@ -2,13 +2,21 @@
   /* Default RideFile */
 
   --Text-color: rgb(255, 255, 255);
+  --Hero-Text-color: rgb(255, 255, 255);
   --SubText-color: rgb(163, 163, 163);
   --Custom-text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
     0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
     0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
     0.035em 0.035em 0 rgba(0, 0, 0, 12%);
+  --Hero-Custom-text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
+    0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
+    0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
+    0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
+    0.035em 0.035em 0 rgba(0, 0, 0, 12%);
   --Red-box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
+    0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
+  --Hero-Red-box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #fe1313,
     0 0 0.8rem #fe1313, 0 0 2.8rem #fe1313, inset 0 0 1.3rem #fe1313;
   --Black-box-shadow: 0 0 1.2rem rgb(0, 0, 0), 0 0 0.2rem rgb(0, 0, 0),
     0 0 2rem #0d0d0d, 0 0 0.8rem #040404, 0 0 2.8rem #000000;
@@ -40,6 +48,7 @@
     drop-shadow(0px 0px 6px #fff);
   --menu-tab-sticks: #000000;
   --menu-tab-options-color: #ff0000;
+  --hero-font-family: "DM Serif Display", serif;
 }
 
 [data-theme="80s"] {
@@ -48,15 +57,20 @@
     inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
     0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff; */
   --Text-color: rgb(43, 209, 252);
+  --Hero-Text-color: rgb(255, 255, 255);
+
   --SubText-color: rgb(163, 163, 163);
   --Custom-text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
     0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
     0.025em 0.025em 0 rgba(0, 0, 0, 18%), 0.03em 0.03em 0 rgba(0, 0, 0, 40%),
     0.035em 0.035em 0 rgba(0, 0, 0, 12%);
+  --Hero-Custom-text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1,
+    0 0 0.3em #fe05e1;
   --Red-box-shadow: 0 0 0.2rem rgb(255, 255, 255), 0 0 0.2rem #fff,
     0 0 2rem rgb(221, 0, 255), 0 0 0.8rem rgb(221, 0, 255),
     0 0 2.8rem rgb(221, 0, 255), inset 0 0 1.3rem rgb(221, 0, 255);
+  --Hero-Red-box-shadow: none;
   --Black-box-shadow: 0 0 1.2rem rgb(192, 77, 249), 0 0 0.2rem rgb(0, 0, 0),
     0 0 2rem rgba(192, 77, 249), 0 0 0.8rem rgba(192, 77, 249),
     0 0 2.8rem rgba(192, 77, 249);
@@ -81,6 +95,7 @@
     drop-shadow(0px 0px 6px #fff);
   --menu-tab-sticks: rgb(221, 0, 255);
   --menu-tab-options-color: rgb(145, 1, 167);
+  --hero-font-family: "Mr Dafoe";
 }
 
 body {
