@@ -317,8 +317,30 @@ export default function CreateNewProfile() {
                 />
               </Form.Item>
             </div>
-
             <div className="rideFormDiv">
+              <Form.Item for="profileImage">
+                Profile Image URL:
+                <Input
+                  name="profileImage"
+                  type="text"
+                  value={newProfile.profileImage}
+                  onChange={handleChange}
+                />
+              </Form.Item>
+            </div>
+            <div className="rideFormDiv">
+              <Form.Item for="rideImage">
+                Ride Image Url:
+                <Input
+                  name="rideImage"
+                  type="text"
+                  value={newProfile.rideImage}
+                  onChange={handleChange}
+                />
+              </Form.Item>
+            </div>
+
+            {/* <div className="rideFormDiv">
               <Form.Item for="profileImage">
                 Profile Image URL:
                 <Upload
@@ -348,7 +370,7 @@ export default function CreateNewProfile() {
                 </Upload>
               </Form.Item>
               <br />
-            </div>
+            </div> */}
             <br />
             <Button onClick={handleSubmit} id="loginButton" htmlType="submit">
               Submit

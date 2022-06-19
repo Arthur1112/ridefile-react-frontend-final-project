@@ -1,17 +1,15 @@
 import { Button, Form, Input } from "antd";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
 import "../styling/loginPage.css";
 import Loader from "./Loader";
-import ProfilePage from "./ProfilePage";
 
 export default function Login() {
-  const { user, setUser, token, setToken } = useContext(UserContext);
+  const { setUser, token, setToken } = useContext(UserContext);
   const [loggedInState, setLoggedInState] = useState(false);
   let navigate = useNavigate();
   const handleLogin = ({ email, password }) => {
-    // e.preventDefault();
     setLoggedInState(true);
     console.log(email, password);
     // fetch("http://localhost:7050/login", {
@@ -36,13 +34,6 @@ export default function Login() {
       })
       .catch((err) => console.log(err));
   };
-
-  // useEffect(() => {
-  //   const _token = localStorage.getItem("token");
-  //   if (_token) {
-  //     navigate("/profile");
-  //   }
-  // }, []);
 
   return (
     <section id="loginContainer">

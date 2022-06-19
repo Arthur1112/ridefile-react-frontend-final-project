@@ -78,7 +78,7 @@
 #themeLabel {
   cursor: pointer;
   text-indent: -9999px;
-  width: 40px;
+  width: 60%;
   height: 20px;
   background: grey;
   display: block;
@@ -90,12 +90,22 @@
   content: "";
   position: absolute;
   top: 0px;
-  left: 1px;
-  width: 20px;
-  height: 20px;
+  left: 1%;
+  width: 50%;
+  height: 100%;
   background: #fff;
   border-radius: 20px;
   transition: 0.3s;
+}
+#themeSwitchContainer {
+  border-style: solid;
+  border-color: black;
+  display: flex;
+  position: fixed;
+  padding: 4px;
+  width: 20%;
+  margin: auto;
+  justify-content: center;
 }
 
 #ThemeSwitch:checked + label {
@@ -107,21 +117,19 @@
   transform: translateX(-100%);
 }
 
-#themeSwitchContainer {
-  /* border-style: solid; */
-  display: flex;
-  position: fixed;
-  padding: 4px;
-  width: 3%;
-  margin: auto;
-  justify-content: center;
-}
-
 @media (max-width: 400px) {
   #HeroPage {
     background: var(--Mobile-Background-color) no-repeat center fixed;
   }
   #heroTitleH1 {
     margin: 150px 80px 80px 80px;
+  }
+  #themeSwitchContainer {
+    width: 15%;
+  }
+}
+@media (min-width: 1300px) {
+  #themeSwitchContainer {
+    width: 8%;
   }
 }

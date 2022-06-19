@@ -5,7 +5,7 @@
   --Hero-Text-color: rgb(255, 255, 255);
   --SubText-color: rgb(163, 163, 163);
   --Hero-backdrop: blur(35px);
-  --Hero-Margin: 120px auto 235px 250px;
+  --Hero-Margin: 120px auto 235px auto;
   --Custom-text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
     0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
@@ -25,8 +25,8 @@
   --RideImage-box-shadow: 0 0 1.2rem rgb(255, 255, 255),
     0 0 0.2rem rgb(255, 0, 0), 0 0 3rem #ff5e00, 0 0 0.8rem #fe1313,
     0 0 2.8rem #ff0000, inset 0 0 1.3rem #fe1313;
-  /* --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #fb1818 86%); */
-  --Red-background-color: linear-gradient(to bottom, #a40606 0%, #d98324 86%);
+  --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #fb1818 86%);
+  /* --Red-background-color: linear-gradient(to bottom, #a40606 0%, #d98324 86%); */
   --Mobile-Background-color: linear-gradient(
     to bottom,
     #ffffff 0%,

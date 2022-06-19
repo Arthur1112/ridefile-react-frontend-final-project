@@ -16,13 +16,16 @@ import { Switch } from "antd";
 export const UserContext = createContext();
 
 function App() {
-  const defaultDark = window.matchMedia("(prefers-color-scheme: 80s)").matches;
+  const defaultDark = window.matchMedia(
+    "(prefers-color-scheme: light)"
+  ).matches;
   const [user, setUser] = useState("");
   const [token, setToken] = useState("");
   const [checked, setChecked] = useState(false);
-  const [theme, setTheme] = useState("theme", defaultDark ? "80s" : "light");
+  const [theme, setTheme] = useState("theme", defaultDark ? "light" : "80s");
+
   const switchTheme = () => {
-    const newTheme = theme === "light" ? "80s" : "light";
+    const newTheme = theme === "80s" ? "light" : "80s";
     setTheme(newTheme);
   };
   useEffect(() => {
