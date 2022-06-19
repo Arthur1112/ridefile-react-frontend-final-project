@@ -119,7 +119,7 @@
 
 @media (max-width: 400px) {
   #HeroPage {
-    background: var(--Red-background-color) no-repeat center fixed;
+    background: var(--Mobile-Background-color) no-repeat center fixed;
   }
   #heroTitleH1 {
     margin: 150px 80px 80px 80px;

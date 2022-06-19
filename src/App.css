@@ -27,7 +27,11 @@
     0 0 2.8rem #ff0000, inset 0 0 1.3rem #fe1313;
   /* --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #fb1818 86%); */
   --Red-background-color: linear-gradient(to bottom, #a40606 0%, #d98324 86%);
-
+  --Mobile-Background-color: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #fb1818 86%
+  );
   --Hero-background-img: url("https://w.wallha.com/ws/11/56tXTAlV.jpg");
   --Black-background-color: linear-gradient(
     90deg,
@@ -87,6 +91,12 @@
   --Red-background-color: url("https://cutewallpaper.org/21/aesthetic-background-gif/6-wallpaper-Best-of-Pastel-Aesthetic-Background-Gif-indias-.gif");
   --Hero-background-img: url("https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif");
   --Black-background-color: linear-gradient(90deg, #270245, #000000);
+  --Mobile-Background-color: linear-gradient(
+    180deg,
+    rgba(43, 209, 252, 1) 0%,
+    rgba(255, 72, 196, 1) 44%,
+    rgba(192, 77, 249, 1) 100%
+  );
   --darkRed-background-color-boxes: linear-gradient(
     90deg,
     rgb(0, 0, 0) 0%,
@@ -136,4 +146,13 @@ html {
 
 #footerContainer {
   background: inherit;
+}
+
+@media (max-width: 400px) {
+  #appMainSection {
+    background: var(--Mobile-Background-color) no-repeat center fixed !important;
+    background-size: cover !important;
+    min-height: 60vw !important;
+    overflow: auto !important;
+  }
 }
