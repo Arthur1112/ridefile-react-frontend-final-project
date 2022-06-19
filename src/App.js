@@ -54,27 +54,58 @@ function App() {
         }}
       >
         <section data-theme={theme} id="appMainSection">
-          <div id="themeSwitchContainer">
-            <input type="checkbox" id="ThemeSwitch" onChange={switchTheme} />{" "}
-            <label id="themeLabel" for="ThemeSwitch"></label>
-          </div>
-          <MenuBar />
-          <Routes>
-            <Route path="/" element={<HeroPage />} />
-            <Route
-              path="/login"
-              element={<Login />}
-              // element={!token ? <Login /> : <ProfilePage />}
-            />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/newProfile" element={<CreateNewProfile />} />
-            <Route
-              path="/newProfileRideInfo"
-              element={<RideInfoNewProfile />}
-            />
-            <Route path="/updateProfile" element={<UpdateProfileSection />} />
-          </Routes>
-          <Footer />
+          <section id="appMainSection2">
+            <div id="themeSwitchContainer">
+              <input type="checkbox" id="ThemeSwitch" onChange={switchTheme} />{" "}
+              <label id="themeLabel" for="ThemeSwitch"></label>
+            </div>
+            <MenuBar />
+            <Routes>
+              <Route path="/" element={<HeroPage />} />
+              <Route
+                path="/login"
+                element={
+                  <>
+                    <Login /> <Footer />
+                  </>
+                }
+                // element={!token ? <Login /> : <ProfilePage />}
+              />
+              <Route
+                path="/profile"
+                element={
+                  <>
+                    <ProfilePage /> <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/newProfile"
+                element={
+                  <>
+                    <CreateNewProfile /> <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/newProfileRideInfo"
+                element={
+                  <>
+                    <RideInfoNewProfile /> <Footer />
+                  </>
+                }
+              />
+              <Route
+                path="/updateProfile"
+                element={
+                  <>
+                    <UpdateProfileSection /> <Footer />{" "}
+                  </>
+                }
+              />
+            </Routes>
+            {/* <Footer /> */}
+          </section>
         </section>
       </UserContext.Provider>
     </BrowserRouter>

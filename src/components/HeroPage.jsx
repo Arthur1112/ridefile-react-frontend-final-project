@@ -4,14 +4,11 @@ import HeroTitle from "./HeroTitle";
 import { ReactComponent as YourSvgtitleCardOneSvg } from "../svg/carDashboardIconsSvg/engine-coolant.svg";
 import { ReactComponent as YourSvgtitleCardTwoSvg } from "../svg/carDashboardIconsSvg/warning.svg";
 import { ReactComponent as YourSvgtitleCardThreeSvg } from "../svg/carDashboardIconsSvg/doors.svg";
-import { useContext } from "react";
-import { UserContext } from "../App";
+import Footer from "./Footer";
 
 export default function HeroPage() {
-  const { theme } = useContext(UserContext);
-
   return (
-    <section data-theme={theme}>
+    <section id="HeroPage">
       <HeroTitle />
       <main className="container">
         <div id="cardOne" className="card">
@@ -72,6 +69,7 @@ export default function HeroPage() {
           </div>
         </div>
       </main>
+      <Footer />
     </section>
   );
 }

@@ -7,6 +7,13 @@
   margin: 30px 80px 80px 80px;
 }
 
+#HeroPage {
+  background: var(--Hero-background-img) no-repeat center fixed;
+  background-size: cover;
+  min-height: 60vw !important;
+  overflow: auto;
+}
+
 /* h1 {
   font-family: "DM Serif Display", serif;
   padding: 2%;
@@ -30,7 +37,7 @@
   box-shadow: var(--Hero-Red-box-shadow);
   justify-content: center;
   font-size: 14vw;
-  /* margin: 120px auto 235px 250px; */
+  margin: var(--Hero-Margin);
   transition: all 2s !important;
   text-shadow: var(--Hero-Custom-text-shadow);
 }
@@ -103,8 +110,18 @@
 #themeSwitchContainer {
   /* border-style: solid; */
   display: flex;
+  position: fixed;
   padding: 4px;
   width: 3%;
   margin: auto;
   justify-content: center;
+}
+
+@media (max-width: 400px) {
+  #HeroPage {
+    background: var(--Red-background-color) no-repeat center fixed;
+  }
+  #heroTitleH1 {
+    margin: 150px 80px 80px 80px;
+  }
 }

@@ -5,6 +5,7 @@
   --Hero-Text-color: rgb(255, 255, 255);
   --SubText-color: rgb(163, 163, 163);
   --Hero-backdrop: blur(35px);
+  --Hero-Margin: 120px auto 235px 250px;
   --Custom-text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
     0.015em 0.015em rgba(0, 0, 0, 14%), 0.02em 0.02em 0 rgba(0, 0, 0, 16%),
@@ -24,7 +25,9 @@
   --RideImage-box-shadow: 0 0 1.2rem rgb(255, 255, 255),
     0 0 0.2rem rgb(255, 0, 0), 0 0 3rem #ff5e00, 0 0 0.8rem #fe1313,
     0 0 2.8rem #ff0000, inset 0 0 1.3rem #fe1313;
-  --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #fb1818 86%);
+  /* --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #fb1818 86%); */
+  --Red-background-color: linear-gradient(to bottom, #a40606 0%, #d98324 86%);
+
   --Hero-background-img: url("https://w.wallha.com/ws/11/56tXTAlV.jpg");
   --Black-background-color: linear-gradient(
     90deg,
@@ -60,7 +63,7 @@
   --Text-color: rgb(43, 209, 252);
   --Hero-Text-color: rgb(255, 255, 255);
   --Hero-backdrop: none;
-
+  --Hero-Margin: 350px 80px 0 80px;
   --SubText-color: rgb(163, 163, 163);
   --Custom-text-shadow: -0.0075em 0.0075em 0 rgba(0, 0, 0, 0.24),
     0.005em 0.005em 0 rgba(0, 0, 0, 10%), 0.01em 0.01em 0 rgba(0, 0, 0, 12%),
@@ -82,7 +85,7 @@
     inset 0 0 1.3rem rgb(255, 0, 221);
   /* --Red-background-color: linear-gradient(to bottom, #ffffff 0%, #0004ff 86%); */
   --Red-background-color: url("https://cutewallpaper.org/21/aesthetic-background-gif/6-wallpaper-Best-of-Pastel-Aesthetic-Background-Gif-indias-.gif");
-  --Hero-background-img: url("https://cutewallpaper.org/21/aesthetic-background-gif/6-wallpaper-Best-of-Pastel-Aesthetic-Background-Gif-indias-.gif");
+  --Hero-background-img: url("https://i.pinimg.com/originals/05/10/f4/0510f4e596283c0d961e4338565a93f3.gif");
   --Black-background-color: linear-gradient(90deg, #270245, #000000);
   --darkRed-background-color-boxes: linear-gradient(
     90deg,
@@ -116,8 +119,15 @@ html {
   margin: 0;
 }
 
+#appMainSection2 {
+  /* background: var(--Hero-background-img) no-repeat center fixed; */
+  background-size: cover !important;
+  min-height: 60vw !important;
+  overflow: auto !important;
+  transition: all 0.5s !important;
+}
 #appMainSection {
-  background: var(--Hero-background-img) no-repeat center fixed !important;
+  background: var(--Red-background-color) no-repeat center fixed !important;
   background-size: cover !important;
   min-height: 60vw !important;
   overflow: auto !important;
