@@ -24,14 +24,14 @@
 #heroTitleH1 {
   position: relative;
   padding: 2%;
-
+  backdrop-filter: var(--Hero-backdrop);
   font-family: var(--hero-font-family);
   color: var(--Hero-Text-color);
   box-shadow: var(--Hero-Red-box-shadow);
   justify-content: center;
   font-size: 14vw;
-  background: var(--darkRed-background-color-boxes);
   /* margin: 120px auto 235px 250px; */
+  transition: all 2s !important;
   text-shadow: var(--Hero-Custom-text-shadow);
 }
 

@@ -8,6 +8,8 @@
 
 #loginContainer {
   width: 25%;
+  transition: all 2s !important;
+
   margin: 90px auto auto auto;
   min-height: 76.9vh;
 }
