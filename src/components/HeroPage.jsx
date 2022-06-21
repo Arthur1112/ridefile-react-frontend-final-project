@@ -40,13 +40,11 @@ export default function HeroPage() {
           </div>
           <div className="face face2">
             <p className="content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-              esse corporis, velit porro impedit laudantium accusamus! Id velit,
-              illum magni rem mollitia blanditiis iste maiores optio ipsa, est
-              dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Eius esse corporis, velit porro impedit laudantium
-              accusamus! Id velit, illum magni rem mollitia blanditiis iste
-              maiores optio ipsa, est dolorem fugit.
+              Start using Ridefile by creating a login account. You will need to
+              fill out a form to create your profile. The information you fill
+              out will populate your profile. This information can be edited at
+              anytime. If you upgrade a feature in your vehicle, you should be
+              able to upgrade your profile. fugit.
             </p>
           </div>
         </div>
@@ -59,13 +57,11 @@ export default function HeroPage() {
           </div>
           <div className="face face2">
             <p className="content">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-              esse corporis, velit porro impedit laudantium accusamus! Id velit,
-              illum magni rem mollitia blanditiis iste maiores optio ipsa, est
-              dolorem fugit. Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Eius esse corporis, velit porro impedit laudantium
-              accusamus! Id velit, illum magni rem mollitia blanditiis iste
-              maiores optio ipsa, est dolorem fugit.
+              In the future we at RideFile want to transform this web
+              application into a mobile app with a more social media aspect. You
+              will be able to connect with your friends and see what they are
+              running in their vehicles. We will also incorprotate a chat
+              feature, allowing you chat live with your friends.
             </p>
           </div>
         </div>
