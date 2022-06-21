@@ -66,8 +66,8 @@
   justify-items: center;
   display: inline-block;
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   overflow: hidden;
   border-radius: 50%;
   animation: flicker 1.5s infinite alternate;
