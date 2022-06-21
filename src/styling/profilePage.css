@@ -24,7 +24,7 @@
 } */
 
 #profileMainContainer {
-  margin: auto;
+  margin: 20px auto auto auto;
   padding: 5px;
   display: flex;
   flex-wrap: wrap;
