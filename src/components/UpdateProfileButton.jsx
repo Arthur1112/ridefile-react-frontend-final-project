@@ -12,7 +12,7 @@ export default function UpdateProfileButton() {
       <button
         id="logoutButton"
         onClick={() => {
-          navigate("/updateProfile");
+          navigate(`/updateProfile/${user.id}`);
         }}
       >
         Update User Profile

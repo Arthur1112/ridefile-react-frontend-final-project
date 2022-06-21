@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 import { UserContext } from "../App";
 
 export default function UpdateProfileSection() {
+  let navigate = useNavigate();
+
   const { user, setUser } = useContext(UserContext);
   // const [newProfile, setNewProfile] = useState({
   //   rideOwner: "",
@@ -29,17 +31,17 @@ export default function UpdateProfileSection() {
   const [error, setError] = useState("");
 
   const handleUpdate = (e) => {
-    fetch(
-      `https://ridefile-final-project-as.web.app/updateProfile/${user.id}`,
-      {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(user),
-      }
-    );
+    fetch(`http://localhost:7050/updateProfile/${user.id}`, {
+      // fetch(
+      //   `https://ridefile-final-project-as.web.app/updateProfile/${user.id}`,
+      //   {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(user),
+    });
     // .then(() => navigate("/login"))
     // .catch(setError);
   };
@@ -294,7 +296,14 @@ export default function UpdateProfileSection() {
               <br />
             </div> */}
             <br />
-            <Button onClick={handleUpdate} id="loginButton" htmlType="submit">
+            <Button
+              onClick={() => {
+                handleUpdate();
+                navigate("/profile");
+              }}
+              id="loginButton"
+              htmlType="submit"
+            >
               Update
             </Button>
           </Form>

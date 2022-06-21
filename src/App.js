@@ -99,7 +99,7 @@ function App() {
                 }
               />
               <Route
-                path="/updateProfile"
+                path="/updateProfile/:id"
                 element={
                   <>
                     <UpdateProfileSection /> <Footer />{" "}

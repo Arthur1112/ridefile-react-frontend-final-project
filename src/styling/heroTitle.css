@@ -98,7 +98,6 @@
   transition: 0.3s;
 }
 #themeSwitchContainer {
-  border-style: solid;
   border-color: black;
   display: flex;
   position: fixed;

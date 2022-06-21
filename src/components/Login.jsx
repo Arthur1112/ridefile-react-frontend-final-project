@@ -9,16 +9,18 @@ export default function Login() {
   const { setUser, token, setToken } = useContext(UserContext);
   const [loggedInState, setLoggedInState] = useState(false);
   let navigate = useNavigate();
-  const handleLogin = ({ email, password }) => {
+
+  const handleLogin = ({ email, Userpassword }) => {
     setLoggedInState(true);
-    console.log(email, password);
-    // fetch("http://localhost:7050/login", {
-    fetch("https://ridefile-final-project-as.web.app/login", {
+    console.log(email, Userpassword);
+    fetch("http://localhost:7050/login", {
+      // fetch("https://ridefile-final-project-as.web.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json",
       },
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email, Userpassword }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -51,7 +53,7 @@ export default function Login() {
               <Input id="loginInput" placeholder="Email" />
             </Form.Item>
             <br />
-            <Form.Item name="password">
+            <Form.Item name="Userpassword">
               <Input.Password id="loginInput" placeholder="Password" />
             </Form.Item>
             <br />

@@ -7,14 +7,14 @@ import "../styling/newProfilePage.css";
 
 // import { salt } from "../mySalt";
 // import bcrypt from "bcryptjs";
+// const hash = bcrypt.hashSync(password, salt);
 
 export default function CreateNewProfile() {
   let navigate = useNavigate();
-  // const hash = bcrypt.hashSync(password, salt);
   const [newProfile, setNewProfile] = useState({
     username: "",
     email: "",
-    password: "", //hash
+    Userpassword: "", //hash
     rideOwner: "",
     rideMake: "",
     rideModel: "",
@@ -37,7 +37,8 @@ export default function CreateNewProfile() {
   const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
-    fetch("https://ridefile-final-project-as.web.app/addNewProfile", {
+    // fetch("https://ridefile-final-project-as.web.app/addNewProfile", {
+    fetch("http://localhost:7050/addNewProfile", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -98,12 +99,12 @@ export default function CreateNewProfile() {
               />
             </Form.Item>
             <br />
-            <Form.Item for="password">
+            <Form.Item for="Userpassword">
               Password:
               <Input
-                name="password"
+                name="Userpassword"
                 type="text"
-                value={newProfile.password}
+                value={newProfile.Userpassword}
                 onChange={handleChange}
               />
             </Form.Item>
