@@ -31,17 +31,18 @@ export default function UpdateProfileSection() {
   const [error, setError] = useState("");
 
   const handleUpdate = (e) => {
-    fetch(`http://localhost:7050/updateProfile/${user.id}`, {
-      // fetch(
-      //   `https://ridefile-final-project-as.web.app/updateProfile/${user.id}`,
-      //   {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify(user),
-    });
+    // fetch(`http://localhost:7050/updateProfile/${user.id}`, {
+    fetch(
+      `https://ridefile-final-project-as.web.app/updateProfile/${user.id}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
     // .then(() => navigate("/login"))
     // .catch(setError);
   };
