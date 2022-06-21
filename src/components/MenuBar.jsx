@@ -51,7 +51,7 @@ export default function MenuBar() {
                 <a
                   onClick={() => {
                     setChecked((old) => !old);
-                    navigate("/login");
+                    navigate("/profile");
                   }}
                 >
                   Profile
